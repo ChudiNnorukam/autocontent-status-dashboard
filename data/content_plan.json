@@ -1,0 +1,463 @@
+{
+  "generated_at": "2025-09-21T01:54:42.794033-04:00",
+  "topics": [
+    "Feedback",
+    "Lessons",
+    "Mindset & Reflection",
+    "Mistakes",
+    "Restraint & Cutting",
+    "Validation & Discovery"
+  ],
+  "posts": [
+    {
+      "text": "I delayed launch for color palettes. Nobody cared. They just wanted the thing to work. Perfection killed momentum.",
+      "topic": "Mistakes",
+      "notes": "Post #1 \u00b7 Mistakes"
+    },
+    {
+      "text": "Once built five features in a sprint. Only one mattered. Four were ego.",
+      "topic": "Mistakes",
+      "notes": "Post #2 \u00b7 Mistakes"
+    },
+    {
+      "text": "I skipped writing tests thinking \u201cMVP doesn\u2019t need them.\u201d First bug humbled me.",
+      "topic": "Mistakes",
+      "notes": "Post #3 \u00b7 Mistakes"
+    },
+    {
+      "text": "Designed onboarding before knowing what \u201conboard\u201d even meant. Empty flow, wasted time.",
+      "topic": "Mistakes",
+      "notes": "Post #4 \u00b7 Mistakes"
+    },
+    {
+      "text": "Ignored copy clarity. Users got lost even though the design was clean. Words broke it.",
+      "topic": "Mistakes",
+      "notes": "Post #5 \u00b7 Mistakes"
+    },
+    {
+      "text": "I hoarded drafts, ashamed of the roughness. By the time I shared, I\u2019d wasted weeks.",
+      "topic": "Mistakes",
+      "notes": "Post #6 \u00b7 Mistakes"
+    },
+    {
+      "text": "I thought silence meant interest. It actually meant irrelevance.",
+      "topic": "Mistakes",
+      "notes": "Post #7 \u00b7 Mistakes"
+    },
+    {
+      "text": "Confused \u201cprogress\u201d with \u201ccommits.\u201d Learned that deleting is progress too.",
+      "topic": "Mistakes",
+      "notes": "Post #8 \u00b7 Mistakes"
+    },
+    {
+      "text": "Wrote docs too early. Threw them away two weeks later.",
+      "topic": "Mistakes",
+      "notes": "Post #9 \u00b7 Mistakes"
+    },
+    {
+      "text": "I let features pile up because cutting hurt. The clutter hurt worse.",
+      "topic": "Mistakes",
+      "notes": "Post #10 \u00b7 Mistakes"
+    },
+    {
+      "text": "I asked \u201cdo you like it?\u201d instead of \u201cwhat\u2019s missing?\u201d Wrong answers followed.",
+      "topic": "Mistakes",
+      "notes": "Post #11 \u00b7 Mistakes"
+    },
+    {
+      "text": "Burned hours coding for edge cases nobody had.",
+      "topic": "Mistakes",
+      "notes": "Post #12 \u00b7 Mistakes"
+    },
+    {
+      "text": "Thought pricing tiers proved maturity. They just confused people.",
+      "topic": "Mistakes",
+      "notes": "Post #13 \u00b7 Mistakes"
+    },
+    {
+      "text": "Tried to clone another product. Ended with a cheap imitation, no soul.",
+      "topic": "Mistakes",
+      "notes": "Post #14 \u00b7 Mistakes"
+    },
+    {
+      "text": "Delayed posting updates out of fear. Fear multiplied, not feedback.",
+      "topic": "Mistakes",
+      "notes": "Post #15 \u00b7 Mistakes"
+    },
+    {
+      "text": "Ugly versions protect me. Prideful ones trap me.",
+      "topic": "Lessons",
+      "notes": "Post #16 \u00b7 Lessons"
+    },
+    {
+      "text": "Cutting features is the only design decision that always pays off.",
+      "topic": "Lessons",
+      "notes": "Post #17 \u00b7 Lessons"
+    },
+    {
+      "text": "If you\u2019re embarrassed by your MVP, you\u2019re finally close.",
+      "topic": "Lessons",
+      "notes": "Post #18 \u00b7 Lessons"
+    },
+    {
+      "text": "Defaults matter more than advanced options. Most never change them.",
+      "topic": "Lessons",
+      "notes": "Post #19 \u00b7 Lessons"
+    },
+    {
+      "text": "Feedback loops are faster than any roadmap.",
+      "topic": "Lessons",
+      "notes": "Post #20 \u00b7 Lessons"
+    },
+    {
+      "text": "The work gets better the moment I stop defending it.",
+      "topic": "Lessons",
+      "notes": "Post #21 \u00b7 Lessons"
+    },
+    {
+      "text": "Every bug report is a gift. It means someone cared enough to break it.",
+      "topic": "Lessons",
+      "notes": "Post #22 \u00b7 Lessons"
+    },
+    {
+      "text": "Validation is not asking if they\u2019d use it. It\u2019s watching them fail to.",
+      "topic": "Lessons",
+      "notes": "Post #23 \u00b7 Lessons"
+    },
+    {
+      "text": "Eyebrows tell more than compliments. Watch faces.",
+      "topic": "Lessons",
+      "notes": "Post #24 \u00b7 Lessons"
+    },
+    {
+      "text": "The best insights are the ones that sting.",
+      "topic": "Lessons",
+      "notes": "Post #25 \u00b7 Lessons"
+    },
+    {
+      "text": "Restraint is a skill. Every \u201cno\u201d is an act of progress.",
+      "topic": "Lessons",
+      "notes": "Post #26 \u00b7 Lessons"
+    },
+    {
+      "text": "Ugly wireframes teach. Pretty ones hide problems.",
+      "topic": "Lessons",
+      "notes": "Post #27 \u00b7 Lessons"
+    },
+    {
+      "text": "Progress is subtracting. Add only when subtraction stops teaching.",
+      "topic": "Lessons",
+      "notes": "Post #28 \u00b7 Lessons"
+    },
+    {
+      "text": "The build is never finished. But it can always be paused.",
+      "topic": "Lessons",
+      "notes": "Post #29 \u00b7 Lessons"
+    },
+    {
+      "text": "Simple math beats fancy AI when the pain is sharp.",
+      "topic": "Lessons",
+      "notes": "Post #30 \u00b7 Lessons"
+    },
+    {
+      "text": "Someone once told me: \u201cThis feels overwhelming.\u201d They were right. I cut half the flow.",
+      "topic": "Feedback",
+      "notes": "Post #31 \u00b7 Feedback"
+    },
+    {
+      "text": "Feedback hurts less when I frame it as co-design, not critique.",
+      "topic": "Feedback",
+      "notes": "Post #32 \u00b7 Feedback"
+    },
+    {
+      "text": "Most valuable feedback I ever got was confusion, not praise.",
+      "topic": "Feedback",
+      "notes": "Post #33 \u00b7 Feedback"
+    },
+    {
+      "text": "Silence in interviews forces truth out.",
+      "topic": "Feedback",
+      "notes": "Post #34 \u00b7 Feedback"
+    },
+    {
+      "text": "People rarely say \u201cthis is bad.\u201d They just stop using it. That\u2019s feedback too.",
+      "topic": "Feedback",
+      "notes": "Post #35 \u00b7 Feedback"
+    },
+    {
+      "text": "Compliments feel nice, but complaints build products.",
+      "topic": "Feedback",
+      "notes": "Post #36 \u00b7 Feedback"
+    },
+    {
+      "text": "The feedback I dread hearing is usually the feedback I need.",
+      "topic": "Feedback",
+      "notes": "Post #37 \u00b7 Feedback"
+    },
+    {
+      "text": "When three people repeat the same frustration, it\u2019s roadmap material.",
+      "topic": "Feedback",
+      "notes": "Post #38 \u00b7 Feedback"
+    },
+    {
+      "text": "Feedback windows are small\u2014ask while the pain is fresh.",
+      "topic": "Feedback",
+      "notes": "Post #39 \u00b7 Feedback"
+    },
+    {
+      "text": "Ignoring harsh feedback once cost me weeks.",
+      "topic": "Feedback",
+      "notes": "Post #40 \u00b7 Feedback"
+    },
+    {
+      "text": "Feedback doesn\u2019t have to be followed, but it must be heard.",
+      "topic": "Feedback",
+      "notes": "Post #41 \u00b7 Feedback"
+    },
+    {
+      "text": "Sometimes the most honest answer is confusion in their eyes.",
+      "topic": "Feedback",
+      "notes": "Post #42 \u00b7 Feedback"
+    },
+    {
+      "text": "Feedback without context is noise. With context, it\u2019s gold.",
+      "topic": "Feedback",
+      "notes": "Post #43 \u00b7 Feedback"
+    },
+    {
+      "text": "Every complaint hides a design flaw.",
+      "topic": "Feedback",
+      "notes": "Post #44 \u00b7 Feedback"
+    },
+    {
+      "text": "Feedback is not the enemy. Indifference is.",
+      "topic": "Feedback",
+      "notes": "Post #45 \u00b7 Feedback"
+    },
+    {
+      "text": "Most of my regrets come from adding, not cutting.",
+      "topic": "Restraint & Cutting",
+      "notes": "Post #46 \u00b7 Restraint & Cutting"
+    },
+    {
+      "text": "Cutting feels like regression until you realize it unblocked the flow.",
+      "topic": "Restraint & Cutting",
+      "notes": "Post #47 \u00b7 Restraint & Cutting"
+    },
+    {
+      "text": "Every product is one cut away from clarity.",
+      "topic": "Restraint & Cutting",
+      "notes": "Post #48 \u00b7 Restraint & Cutting"
+    },
+    {
+      "text": "Launch days are flashy. Delete-a-feature days are transformative.",
+      "topic": "Restraint & Cutting",
+      "notes": "Post #49 \u00b7 Restraint & Cutting"
+    },
+    {
+      "text": "\u201cWhat if we just add\u2026\u201d is the first line of scope creep.",
+      "topic": "Restraint & Cutting",
+      "notes": "Post #50 \u00b7 Restraint & Cutting"
+    },
+    {
+      "text": "One line of code can be progress. Deleting twenty can be more.",
+      "topic": "Restraint & Cutting",
+      "notes": "Post #51 \u00b7 Restraint & Cutting"
+    },
+    {
+      "text": "My proudest features are the ones I killed in time.",
+      "topic": "Restraint & Cutting",
+      "notes": "Post #52 \u00b7 Restraint & Cutting"
+    },
+    {
+      "text": "I\u2019ve never regretted cutting. Only delaying it.",
+      "topic": "Restraint & Cutting",
+      "notes": "Post #53 \u00b7 Restraint & Cutting"
+    },
+    {
+      "text": "Subtraction is design. Addition is distraction.",
+      "topic": "Restraint & Cutting",
+      "notes": "Post #54 \u00b7 Restraint & Cutting"
+    },
+    {
+      "text": "Discipline is stopping mid-sentence when the feature itch kicks in.",
+      "topic": "Restraint & Cutting",
+      "notes": "Post #55 \u00b7 Restraint & Cutting"
+    },
+    {
+      "text": "Cutting scope feels small. It\u2019s the only thing that scales.",
+      "topic": "Restraint & Cutting",
+      "notes": "Post #56 \u00b7 Restraint & Cutting"
+    },
+    {
+      "text": "A product that tries to do everything ends up doing nothing well.",
+      "topic": "Restraint & Cutting",
+      "notes": "Post #57 \u00b7 Restraint & Cutting"
+    },
+    {
+      "text": "\u201cJust one more thing\u201d has sunk more projects than bugs ever did.",
+      "topic": "Restraint & Cutting",
+      "notes": "Post #58 \u00b7 Restraint & Cutting"
+    },
+    {
+      "text": "The less I build, the faster I learn.",
+      "topic": "Restraint & Cutting",
+      "notes": "Post #59 \u00b7 Restraint & Cutting"
+    },
+    {
+      "text": "Every cut is an invisible feature: focus.",
+      "topic": "Restraint & Cutting",
+      "notes": "Post #60 \u00b7 Restraint & Cutting"
+    },
+    {
+      "text": "Validation feels slow. But every skipped conversation turns into wasted weeks.",
+      "topic": "Validation & Discovery",
+      "notes": "Post #61 \u00b7 Validation & Discovery"
+    },
+    {
+      "text": "Ten interviews > one polished deck.",
+      "topic": "Validation & Discovery",
+      "notes": "Post #62 \u00b7 Validation & Discovery"
+    },
+    {
+      "text": "\u201cWould you pay for this?\u201d reveals more than \u201cdo you like this?\u201d",
+      "topic": "Validation & Discovery",
+      "notes": "Post #63 \u00b7 Validation & Discovery"
+    },
+    {
+      "text": "The people who say \u201ccool idea\u201d are the least likely to use it.",
+      "topic": "Validation & Discovery",
+      "notes": "Post #64 \u00b7 Validation & Discovery"
+    },
+    {
+      "text": "Real validation starts when they reach for their wallet.",
+      "topic": "Validation & Discovery",
+      "notes": "Post #65 \u00b7 Validation & Discovery"
+    },
+    {
+      "text": "\u201cEveryone\u201d is not an audience. Be weirdly specific.",
+      "topic": "Validation & Discovery",
+      "notes": "Post #66 \u00b7 Validation & Discovery"
+    },
+    {
+      "text": "I once asked the wrong people for feedback. Built for them, not the ones in pain.",
+      "topic": "Validation & Discovery",
+      "notes": "Post #67 \u00b7 Validation & Discovery"
+    },
+    {
+      "text": "Most assumptions crumble the moment you shut up and take notes.",
+      "topic": "Validation & Discovery",
+      "notes": "Post #68 \u00b7 Validation & Discovery"
+    },
+    {
+      "text": "If you can\u2019t explain who it\u2019s for, you\u2019re building for no one.",
+      "topic": "Validation & Discovery",
+      "notes": "Post #69 \u00b7 Validation & Discovery"
+    },
+    {
+      "text": "People rarely know what they want. But they know what annoys them.",
+      "topic": "Validation & Discovery",
+      "notes": "Post #70 \u00b7 Validation & Discovery"
+    },
+    {
+      "text": "Validation is less about ideas, more about observing coping mechanisms.",
+      "topic": "Validation & Discovery",
+      "notes": "Post #71 \u00b7 Validation & Discovery"
+    },
+    {
+      "text": "A landing page teaches faster than a pitch.",
+      "topic": "Validation & Discovery",
+      "notes": "Post #72 \u00b7 Validation & Discovery"
+    },
+    {
+      "text": "Asking what they *don\u2019t* like gets me further than asking what they do.",
+      "topic": "Validation & Discovery",
+      "notes": "Post #73 \u00b7 Validation & Discovery"
+    },
+    {
+      "text": "People reveal more in confusion than in praise.",
+      "topic": "Validation & Discovery",
+      "notes": "Post #74 \u00b7 Validation & Discovery"
+    },
+    {
+      "text": "Listening is free. Rebuilding is expensive.",
+      "topic": "Validation & Discovery",
+      "notes": "Post #75 \u00b7 Validation & Discovery"
+    },
+    {
+      "text": "Building in public is just leaving breadcrumbs for future-me.",
+      "topic": "Mindset & Reflection",
+      "notes": "Post #76 \u00b7 Mindset & Reflection"
+    },
+    {
+      "text": "The moments I want to hide are the ones worth posting.",
+      "topic": "Mindset & Reflection",
+      "notes": "Post #77 \u00b7 Mindset & Reflection"
+    },
+    {
+      "text": "Progress doesn\u2019t look like speed. It looks like discipline.",
+      "topic": "Mindset & Reflection",
+      "notes": "Post #78 \u00b7 Mindset & Reflection"
+    },
+    {
+      "text": "Sharing the messy middle removes its power to shame me.",
+      "topic": "Mindset & Reflection",
+      "notes": "Post #79 \u00b7 Mindset & Reflection"
+    },
+    {
+      "text": "Perfectionism is just procrastination dressed up.",
+      "topic": "Mindset & Reflection",
+      "notes": "Post #80 \u00b7 Mindset & Reflection"
+    },
+    {
+      "text": "Most of my learning comes disguised as embarrassment.",
+      "topic": "Mindset & Reflection",
+      "notes": "Post #81 \u00b7 Mindset & Reflection"
+    },
+    {
+      "text": "I don\u2019t need more motivation. I need more small launches.",
+      "topic": "Mindset & Reflection",
+      "notes": "Post #82 \u00b7 Mindset & Reflection"
+    },
+    {
+      "text": "Burnout creeps in when I stop cutting scope.",
+      "topic": "Mindset & Reflection",
+      "notes": "Post #83 \u00b7 Mindset & Reflection"
+    },
+    {
+      "text": "My most productive days feel boring. Clarity often does.",
+      "topic": "Mindset & Reflection",
+      "notes": "Post #84 \u00b7 Mindset & Reflection"
+    },
+    {
+      "text": "Documenting while messy saves me from repeating mistakes.",
+      "topic": "Mindset & Reflection",
+      "notes": "Post #85 \u00b7 Mindset & Reflection"
+    },
+    {
+      "text": "Shipping is exposure therapy. Each push makes fear smaller.",
+      "topic": "Mindset & Reflection",
+      "notes": "Post #86 \u00b7 Mindset & Reflection"
+    },
+    {
+      "text": "The build is never about proving genius. It\u2019s about proving pain exists.",
+      "topic": "Mindset & Reflection",
+      "notes": "Post #87 \u00b7 Mindset & Reflection"
+    },
+    {
+      "text": "Honest reflection beats flawless execution. One builds trust, the other builds nothing.",
+      "topic": "Mindset & Reflection",
+      "notes": "Post #88 \u00b7 Mindset & Reflection"
+    },
+    {
+      "text": "If I\u2019m proud too early, I overbuilt. If I\u2019m embarrassed, I\u2019m on track.",
+      "topic": "Mindset & Reflection",
+      "notes": "Post #89 \u00b7 Mindset & Reflection"
+    },
+    {
+      "text": "The trail I\u2019m leaving isn\u2019t for vanity. It\u2019s for anyone else stumbling forward.",
+      "topic": "Mindset & Reflection",
+      "notes": "Post #90 \u00b7 Mindset & Reflection"
+    }
+  ]
+}

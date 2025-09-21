@@ -1,0 +1,25 @@
+# Python / tooling artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+
+# IDE settings & local configs
+.env
+.DS_Store
+.vscode/
+*.code-workspace
+
+# Build / cache directories
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.cache/
+
+# Logs
+*.log
+

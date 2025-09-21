@@ -1,0 +1,38 @@
+{
+  "summary": "Reflective builder voice focused on product clarity, customer feedback, and shipping lean iterations. Emphasizes learning from mistakes, simplifying flows, and balancing build-in-public marketing with user empathy.",
+  "metrics": {
+    "avg_length": 163.44,
+    "median_length": 168.0,
+    "avg_like": 0.0,
+    "avg_engagement": 0.0,
+    "tweet_count": 50
+  },
+  "hashtags": [
+    "buildinpublic",
+    "productstrategy",
+    "customerfeedback",
+    "startups",
+    "shipfast"
+  ],
+  "mentions": [
+    "founders",
+    "customers",
+    "designers",
+    "productteams",
+    "builders"
+  ],
+  "emoji": [
+    ":hammer:",
+    ":rocket:",
+    ":memo:",
+    ":repeat:",
+    ":bulb:"
+  ],
+  "high_performing_examples": [
+    "I built the first version of Feature X blindfolded—no user feedback, no sketches. It shipped. It failed. Lesson: seeing pain before coding saves way more time than tweaking UI.",
+    "I once delayed feature X because I thought I didn’t have capacity. Feedback: users commented “we need this.” Fix: simplified scope, shipped minimal version. Lesson: imperfect > invisible.",
+    "Mistake: I built integrations (Slack, email) thinking they were demand. Feedback: “I don’t care.” Removed them. Lesson: enthusiasm ≠ necessity.",
+    "I thought expanding platforms (mobile/web) is always a win. Feedback: web version usage dwarfed mobile. Fix: focused web first. Lesson: follow where people actually use, not where you want them to.",
+    "Got negative feedback when I skipped onboarding UX. Users thought feature was broken. Fix: added simple guide. Lesson: sometimes “explain what this is” matters more than shiny visuals."
+  ]
+}
