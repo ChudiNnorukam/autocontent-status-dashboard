@@ -23,16 +23,25 @@ jobs:
           pip install .
 
       - name: Create environment file
+        env:
+          X_HANDLE: ${{ secrets.X_HANDLE }}
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
+          TIMEZONE: ${{ secrets.TIMEZONE }}
         run: |
           cat <<'EOF' > .env
-          X_HANDLE=${{ secrets.X_HANDLE }}
-          X_API_KEY=${{ secrets.X_API_KEY }}
-          X_API_SECRET=${{ secrets.X_API_SECRET }}
-          X_ACCESS_TOKEN=${{ secrets.X_ACCESS_TOKEN }}
-          X_ACCESS_TOKEN_SECRET=${{ secrets.X_ACCESS_TOKEN_SECRET }}
-          OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL=${{ secrets.OPENAI_MODEL }}
-          TIMEZONE=${{ secrets.TIMEZONE }}
+          X_HANDLE=${X_HANDLE}
+          X_API_KEY=${X_API_KEY}
+          X_API_SECRET=${X_API_SECRET}
+          X_ACCESS_TOKEN=${X_ACCESS_TOKEN}
+          X_ACCESS_TOKEN_SECRET=${X_ACCESS_TOKEN_SECRET}
+          OPENAI_API_KEY=${OPENAI_API_KEY}
+          OPENAI_MODEL=${OPENAI_MODEL:-gpt-4o-mini}
+          TIMEZONE=${TIMEZONE:-America/New_York}
           EOF
 
       - name: Process due posts
