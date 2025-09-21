@@ -26,7 +26,7 @@
         --danger: #f87171;
         --success: #22c55e;
         --panel-glow: 0 40px 80px rgba(15, 23, 42, 0.55);
-        font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+        --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
       }
 
       * {
@@ -40,6 +40,26 @@
         color: var(--text);
         display: flex;
         justify-content: center;
+        font-family: var(--font-sans);
+        transition: background 0.6s ease, color 0.6s ease;
+        overflow-x: hidden;
+      }
+
+      body[data-theme="light"] {
+        color-scheme: light;
+        --bg: radial-gradient(circle at top left, #f8fafc 0%, #e2e8f0 45%, #cbd5f5 100%);
+        --panel: rgba(255, 255, 255, 0.82);
+        --panel-strong: rgba(255, 255, 255, 0.94);
+        --panel-border: rgba(148, 163, 184, 0.2);
+        --text: #0f172a;
+        --text-muted: rgba(51, 65, 85, 0.72);
+        --accent: #0ea5e9;
+        --accent-strong: #0284c7;
+        --accent-soft: rgba(14, 165, 233, 0.16);
+        --warning: #ea580c;
+        --danger: #dc2626;
+        --success: #16a34a;
+        --panel-glow: 0 30px 70px rgba(15, 23, 42, 0.1);
       }
 
       main {
@@ -65,6 +85,46 @@
         filter: blur(20px);
         pointer-events: none;
         z-index: -1;
+      }
+
+      .header-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .theme-toggle {
+        border: none;
+        padding: 0.48rem 1.05rem;
+        border-radius: 999px;
+        background: var(--accent-soft);
+        color: var(--accent);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        font-size: 0.75rem;
+        cursor: pointer;
+        transition: transform 0.25s ease, background 0.3s ease, color 0.3s ease;
+      }
+
+      .theme-toggle:hover {
+        transform: translateY(-1px);
+        background: rgba(56, 189, 248, 0.24);
+      }
+
+      .theme-toggle:focus-visible,
+      .ghost-button:focus-visible,
+      .copy-btn:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 2px;
       }
 
       .pill {
@@ -103,6 +163,58 @@
         flex-wrap: wrap;
         font-size: 0.9rem;
         color: var(--text-muted);
+      }
+
+      .control-bar {
+        display: flex;
+        align-items: flex-end;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-bottom: 1.4rem;
+      }
+
+      .control-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+      }
+
+      .control-item label {
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        color: rgba(148, 163, 184, 0.82);
+      }
+
+      .control-item select {
+        background: var(--panel);
+        border: 1px solid var(--panel-border);
+        border-radius: 12px;
+        padding: 0.55rem 0.75rem;
+        color: var(--text);
+        font-size: 0.95rem;
+        box-shadow: var(--panel-glow);
+        transition: border 0.2s ease, background 0.2s ease;
+      }
+
+      .control-item select:hover {
+        border-color: rgba(148, 163, 184, 0.4);
+      }
+
+      .ghost-button {
+        border: 1px solid var(--panel-border);
+        background: transparent;
+        color: var(--text-muted);
+        border-radius: 12px;
+        padding: 0.55rem 1rem;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: background 0.25s ease, color 0.25s ease;
+      }
+
+      .ghost-button:hover {
+        background: rgba(148, 163, 184, 0.12);
+        color: var(--text);
       }
 
       .panel-grid {
@@ -203,6 +315,7 @@
       .list li {
         padding-bottom: 1.1rem;
         border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+        animation: fadeUp 0.4s ease both;
       }
 
       .list li:last-child {
@@ -248,6 +361,68 @@
         flex-wrap: wrap;
         gap: 0.45rem;
         margin-top: 0.9rem;
+      }
+
+      .card-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+        margin-top: 0.65rem;
+      }
+
+      .copy-btn {
+        border: 1px solid rgba(148, 163, 184, 0.32);
+        background: rgba(148, 163, 184, 0.12);
+        color: var(--text);
+        border-radius: 12px;
+        padding: 0.4rem 0.85rem;
+        font-size: 0.82rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background 0.25s ease, color 0.25s ease, border 0.25s ease;
+      }
+
+      .copy-btn:hover,
+      .copy-btn.copied {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #0f172a;
+      }
+
+      .toast {
+        position: fixed;
+        bottom: 2.5rem;
+        right: 2.5rem;
+        padding: 0.85rem 1.2rem;
+        background: var(--panel-strong);
+        border: 1px solid var(--panel-border);
+        border-radius: 12px;
+        color: var(--text);
+        font-size: 0.9rem;
+        line-height: 1.4;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        box-shadow: var(--panel-glow);
+      }
+
+      .toast.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(6px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
       .tag-group span {
@@ -303,13 +478,29 @@
         .two-column {
           grid-template-columns: 1fr;
         }
+
+        .control-bar {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .toast {
+          right: 1.5rem;
+          left: 1.5rem;
+          bottom: 1.5rem;
+        }
       }
     </style>
   </head>
-  <body>
+  <body data-theme="dark">
     <main>
       <header>
-        <span class="pill" id="status-pill">Booting telemetry…</span>
+        <div class="header-top">
+          <span class="pill" id="status-pill">Booting telemetry…</span>
+          <div class="header-actions">
+            <button class="theme-toggle" id="theme-toggle" type="button">🌙 Dark mode</button>
+          </div>
+        </div>
         <h1>Personal Brand Autoposter · Command Center</h1>
         <p class="subtitle">
           Live overview of your voice assets, content pipeline, and scheduling cadence. All figures below are derived from the local data artifacts in <code>data/</code>; no account secrets are exposed in the browser.
@@ -322,6 +513,16 @@
       <div class="section-title">
         <h3>Upcoming cadence</h3>
         <span id="cadence-summary"></span>
+      </div>
+
+      <div class="control-bar">
+        <div class="control-item">
+          <label for="topic-filter">Upcoming filter</label>
+          <select id="topic-filter">
+            <option value="All">All topics</option>
+          </select>
+        </div>
+        <button class="ghost-button" id="reset-filter" type="button">Reset</button>
       </div>
 
       <div class="two-column" id="cadence-widgets">
@@ -378,6 +579,8 @@
       </section>
     </main>
 
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
       const sources = {
@@ -386,6 +589,17 @@
         queue: 'data/post_queue.json',
         schedule: 'data/last_schedule.json',
       };
+      const THEME_KEY = 'autoposter-dashboard-theme';
+      const toastEl = document.getElementById('toast');
+      const filterSelect = document.getElementById('topic-filter');
+      const resetFilterBtn = document.getElementById('reset-filter');
+      const themeToggle = document.getElementById('theme-toggle');
+      let stateCache = null;
+      let statsCache = null;
+      let activeTopic = 'All';
+      let toastTimer = null;
+      let topicChart = null;
+      let dailyChart = null;
 
       const fmtDateTime = (value, withTz = true) => {
         if (!value) return 'Not set';
@@ -409,6 +623,106 @@
         return text.length > limit ? `${text.slice(0, limit)}…` : text;
       };
 
+      const formatPreview = (text, limit = 160) =>
+        truncate(text, limit).replace(/\n/g, '<br />');
+
+      const escapeAttr = (value = '') =>
+        value
+          .replace(/&/g, '&amp;')
+          .replace(/"/g, '&quot;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/'/g, '&#39;')
+          .replace(/\r?\n/g, '&#10;');
+
+      const showToast = (message) => {
+        if (!toastEl) return;
+        toastEl.textContent = message;
+        toastEl.classList.add('show');
+        if (toastTimer) clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => toastEl.classList.remove('show'), 2400);
+      };
+
+      const setTheme = (theme) => {
+        const next = theme === 'light' ? 'light' : 'dark';
+        document.body.dataset.theme = next;
+        localStorage.setItem(THEME_KEY, next);
+        if (themeToggle) {
+          themeToggle.textContent = next === 'dark' ? '🌙 Dark mode' : '☀️ Light mode';
+        }
+      };
+
+      const toggleTheme = () => {
+        const current = document.body.dataset.theme || 'dark';
+        const next = current === 'dark' ? 'light' : 'dark';
+        setTheme(next);
+        showToast(`Switched to ${next} theme`);
+        if (statsCache) {
+          renderUpcoming(statsCache);
+          renderCharts(statsCache);
+        }
+      };
+
+      const populateTopicFilter = (stats) => {
+        if (!filterSelect) return;
+        const topics = Array.from(stats.topics.keys());
+        filterSelect.innerHTML = ['<option value="All">All topics</option>', ...topics.map((topic) => `<option value="${topic}">${topic}</option>`)].join('');
+        if (!topics.includes(activeTopic)) {
+          activeTopic = 'All';
+        }
+        filterSelect.value = activeTopic;
+      };
+
+      const bindFilterControls = () => {
+        if (filterSelect && !filterSelect.dataset.bound) {
+          filterSelect.addEventListener('change', (event) => {
+            activeTopic = event.target.value;
+            if (statsCache) {
+              renderUpcoming(statsCache);
+              if (activeTopic !== 'All') {
+                showToast(`Filtering by ${activeTopic}`);
+              }
+            }
+          });
+          filterSelect.dataset.bound = 'true';
+        }
+
+        if (resetFilterBtn && !resetFilterBtn.dataset.bound) {
+          resetFilterBtn.addEventListener('click', () => {
+            activeTopic = 'All';
+            if (filterSelect) filterSelect.value = 'All';
+            if (statsCache) renderUpcoming(statsCache);
+            showToast('Filters cleared');
+          });
+          resetFilterBtn.dataset.bound = 'true';
+        }
+      };
+
+      const bindCopyHandlers = (scope) => {
+        const buttons = (scope || document).querySelectorAll('.copy-btn');
+        buttons.forEach((btn) => {
+          if (btn.dataset.bound) return;
+          btn.addEventListener('click', async () => {
+            const payload = btn.getAttribute('data-text') || '';
+            try {
+              await navigator.clipboard.writeText(payload.replace(/&#10;/g, '\n'));
+              btn.classList.add('copied');
+              showToast('Copied post to clipboard');
+              setTimeout(() => btn.classList.remove('copied'), 1200);
+            } catch (error) {
+              showToast('Clipboard permissions blocked');
+            }
+          });
+          btn.dataset.bound = 'true';
+        });
+      };
+
+      if (themeToggle) {
+        themeToggle.addEventListener('click', toggleTheme);
+      }
+
+      setTheme(localStorage.getItem(THEME_KEY) || document.body.dataset.theme || 'dark');
+
       const fetchState = async () => {
         const state = {};
         await Promise.all(
@@ -427,7 +741,9 @@
       };
 
       const compute = (state) => {
-        const queue = state.queue || [];
+        const queue = (state.queue || [])
+          .map((item) => ({ ...item }))
+          .sort((a, b) => new Date(a.scheduled_time) - new Date(b.scheduled_time));
         const plan = state.plan || { posts: [] };
         const firstSlot = queue[0]?.scheduled_time;
         const lastSlot = queue.at(-1)?.scheduled_time;
@@ -522,35 +838,50 @@
 
       const renderUpcoming = (stats) => {
         const target = document.querySelector('#upcoming-panel');
-        target.innerHTML = '<h2>Next 9 posts</h2>';
+        target.innerHTML = '<h2>Next posts</h2>';
         const list = document.createElement('ul');
         list.className = 'list';
 
-        if (!stats.upcoming.length) {
-          list.innerHTML = '<li>No posts queued. Schedule to preview upcoming copy.</li>';
+        const pool = activeTopic === 'All'
+          ? stats.queue
+          : stats.queue.filter((item) => (item.topic || 'General') === activeTopic);
+        const entries = pool.slice(0, 9);
+
+        if (!entries.length) {
+          list.innerHTML = '<li>No posts match the selected filters.</li>';
         } else {
-          stats.upcoming.forEach((item) => {
+          entries.forEach((item) => {
+            const topicLabel = item.topic || 'General';
             const li = document.createElement('li');
             li.innerHTML = `
               <span class="timestamp">${fmtDateTime(item.scheduled_time)}</span>
-              <div class="summary">${truncate(item.text)}</div>
-              <div class="topic-pill">${item.topic || 'General'}</div>
+              <div class="summary">${formatPreview(item.text)}</div>
+              <div class="card-footer">
+                <div class="topic-pill">${topicLabel}</div>
+                <button class="copy-btn" type="button" data-text="${escapeAttr(item.text)}">Copy</button>
+              </div>
             `;
             list.appendChild(li);
           });
         }
 
         target.appendChild(list);
+        bindCopyHandlers(list);
       };
 
       const renderCharts = (stats) => {
         const topicCtx = document.getElementById('topics-chart');
         const dailyCtx = document.getElementById('daily-chart');
+        const computedStyle = getComputedStyle(document.body);
+        const textColor = (computedStyle.getPropertyValue('--text') || '#f8fafc').trim();
+        const mutedColor = (computedStyle.getPropertyValue('--text-muted') || textColor).trim();
+        const gridColor = 'rgba(148, 163, 184, 0.12)';
 
         const topicLabels = Array.from(stats.topics.keys());
         const topicValues = Array.from(stats.topics.values());
 
-        new Chart(topicCtx, {
+        if (topicChart) topicChart.destroy();
+        topicChart = new Chart(topicCtx, {
           type: 'doughnut',
           data: {
             labels: topicLabels,
@@ -573,7 +904,7 @@
             plugins: {
               legend: {
                 position: 'bottom',
-                labels: { color: 'rgba(241,245,249,0.9)' },
+                labels: { color: mutedColor },
               },
             },
           },
@@ -584,7 +915,8 @@
         );
         const dailyValues = Array.from(stats.dailyCounts.values());
 
-        new Chart(dailyCtx, {
+        if (dailyChart) dailyChart.destroy();
+        dailyChart = new Chart(dailyCtx, {
           type: 'bar',
           data: {
             labels: dailyLabels,
@@ -600,13 +932,13 @@
           options: {
             scales: {
               x: {
-                ticks: { color: 'rgba(226,232,240,0.8)' },
-                grid: { color: 'rgba(148,163,184,0.08)' },
+                ticks: { color: mutedColor },
+                grid: { color: gridColor },
               },
               y: {
                 beginAtZero: true,
-                ticks: { color: 'rgba(226,232,240,0.8)', stepSize: 1 },
-                grid: { color: 'rgba(148,163,184,0.08)' },
+                ticks: { color: mutedColor, stepSize: 1 },
+                grid: { color: gridColor },
               },
             },
             plugins: {
@@ -621,6 +953,8 @@
         const voice = state.voice;
         if (!voice) {
           panel.innerHTML = '<h2>Voice profile</h2><p>No voice profile found. Run `x-autoposter train`.</p>';
+          const meta = document.querySelector('#voice-meta');
+          if (meta) meta.textContent = 'No dataset loaded';
           return;
         }
 
@@ -632,7 +966,7 @@
                 .join('')
             : '<span>None</span>';
 
-        panel.innerHTML = `
+          panel.innerHTML = `
           <h2>Voice profile</h2>
           <p>${voice.summary || 'No summary available.'}</p>
           <div class="tag-group">${tags(voice.hashtags)}</div>
@@ -652,6 +986,12 @@
               .join('') || '<li>No examples stored.</li>'}
           </ul>
         `;
+
+        const meta = document.querySelector('#voice-meta');
+        if (meta) {
+          const avgLength = Math.round(voice.metrics?.avg_length ?? 0);
+          meta.textContent = `${voice.metrics?.tweet_count ?? 0} source posts · Avg length ${avgLength} chars`;
+        }
       };
 
       const renderInsights = (stats) => {
@@ -738,6 +1078,10 @@
       (async () => {
         const state = await fetchState();
         const stats = compute(state);
+        stateCache = state;
+        statsCache = stats;
+        populateTopicFilter(stats);
+        bindFilterControls();
         renderSummaryCards(state, stats);
         renderMetaStrip(state, stats);
         renderUpcoming(stats);
