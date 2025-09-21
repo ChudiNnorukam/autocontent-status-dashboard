@@ -1,0 +1,812 @@
+[
+  {
+    "id": "6d036f70-8897-41b9-9bc1-171fdc40a3b1",
+    "text": "I delayed launch for color palettes. Nobody cared. They just wanted the thing to work. Perfection killed momentum.",
+    "scheduled_time": "2025-09-21T09:00:00-04:00",
+    "topic": "Mistakes",
+    "notes": "Post #1 \u00b7 Mistakes",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "9082ff3a-00f6-4753-8b02-934b37164ff9",
+    "text": "Once built five features in a sprint. Only one mattered. Four were ego.",
+    "scheduled_time": "2025-09-21T13:00:00-04:00",
+    "topic": "Mistakes",
+    "notes": "Post #2 \u00b7 Mistakes",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "abbc1823-c9e8-4f62-b33b-8035ce34e7cc",
+    "text": "I skipped writing tests thinking \u201cMVP doesn\u2019t need them.\u201d First bug humbled me.",
+    "scheduled_time": "2025-09-21T18:00:00-04:00",
+    "topic": "Mistakes",
+    "notes": "Post #3 \u00b7 Mistakes",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "109d1b52-6c59-4872-a0ac-0d1a6c1cfc73",
+    "text": "Designed onboarding before knowing what \u201conboard\u201d even meant. Empty flow, wasted time.",
+    "scheduled_time": "2025-09-22T09:00:00-04:00",
+    "topic": "Mistakes",
+    "notes": "Post #4 \u00b7 Mistakes",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "debd6cbc-611d-4ad5-b3cc-35a74a045727",
+    "text": "Ignored copy clarity. Users got lost even though the design was clean. Words broke it.",
+    "scheduled_time": "2025-09-22T13:00:00-04:00",
+    "topic": "Mistakes",
+    "notes": "Post #5 \u00b7 Mistakes",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "90fbfe6b-9152-4022-b531-44efdb653110",
+    "text": "I hoarded drafts, ashamed of the roughness. By the time I shared, I\u2019d wasted weeks.",
+    "scheduled_time": "2025-09-22T18:00:00-04:00",
+    "topic": "Mistakes",
+    "notes": "Post #6 \u00b7 Mistakes",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "f1e84c2a-0521-4b82-8b58-11cf42c6b85b",
+    "text": "I thought silence meant interest. It actually meant irrelevance.",
+    "scheduled_time": "2025-09-23T09:00:00-04:00",
+    "topic": "Mistakes",
+    "notes": "Post #7 \u00b7 Mistakes",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "f3d7b949-b292-4830-9f0b-3a0eabd43e22",
+    "text": "Confused \u201cprogress\u201d with \u201ccommits.\u201d Learned that deleting is progress too.",
+    "scheduled_time": "2025-09-23T13:00:00-04:00",
+    "topic": "Mistakes",
+    "notes": "Post #8 \u00b7 Mistakes",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "4a55deb1-a987-4410-9aae-475d19b6835a",
+    "text": "Wrote docs too early. Threw them away two weeks later.",
+    "scheduled_time": "2025-09-23T18:00:00-04:00",
+    "topic": "Mistakes",
+    "notes": "Post #9 \u00b7 Mistakes",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "ffb49847-af9a-498b-906d-1d31a0e1d3e1",
+    "text": "I let features pile up because cutting hurt. The clutter hurt worse.",
+    "scheduled_time": "2025-09-24T09:00:00-04:00",
+    "topic": "Mistakes",
+    "notes": "Post #10 \u00b7 Mistakes",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "9095e4a2-6d21-4b55-bc29-9974854a7698",
+    "text": "I asked \u201cdo you like it?\u201d instead of \u201cwhat\u2019s missing?\u201d Wrong answers followed.",
+    "scheduled_time": "2025-09-24T13:00:00-04:00",
+    "topic": "Mistakes",
+    "notes": "Post #11 \u00b7 Mistakes",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "08f8f0ff-6953-4a5e-ad6d-8c560587f6df",
+    "text": "Burned hours coding for edge cases nobody had.",
+    "scheduled_time": "2025-09-24T18:00:00-04:00",
+    "topic": "Mistakes",
+    "notes": "Post #12 \u00b7 Mistakes",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "711687d4-08af-4c5f-85ee-6696f0c11e24",
+    "text": "Thought pricing tiers proved maturity. They just confused people.",
+    "scheduled_time": "2025-09-25T09:00:00-04:00",
+    "topic": "Mistakes",
+    "notes": "Post #13 \u00b7 Mistakes",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "e0f8fc62-d18b-43fe-a6e4-79db5eb9c3a0",
+    "text": "Tried to clone another product. Ended with a cheap imitation, no soul.",
+    "scheduled_time": "2025-09-25T13:00:00-04:00",
+    "topic": "Mistakes",
+    "notes": "Post #14 \u00b7 Mistakes",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "f704c9e6-82a8-4e73-b2bd-4efcc182ccb1",
+    "text": "Delayed posting updates out of fear. Fear multiplied, not feedback.",
+    "scheduled_time": "2025-09-25T18:00:00-04:00",
+    "topic": "Mistakes",
+    "notes": "Post #15 \u00b7 Mistakes",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "895e91fa-c828-4a7e-963d-7532322bfe0c",
+    "text": "Ugly versions protect me. Prideful ones trap me.",
+    "scheduled_time": "2025-09-26T09:00:00-04:00",
+    "topic": "Lessons",
+    "notes": "Post #16 \u00b7 Lessons",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "0043a5f1-986f-4dbb-96ea-c2bd288efc48",
+    "text": "Cutting features is the only design decision that always pays off.",
+    "scheduled_time": "2025-09-26T13:00:00-04:00",
+    "topic": "Lessons",
+    "notes": "Post #17 \u00b7 Lessons",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "d9b4628f-f743-4db4-bda1-83f0265f5b2a",
+    "text": "If you\u2019re embarrassed by your MVP, you\u2019re finally close.",
+    "scheduled_time": "2025-09-26T18:00:00-04:00",
+    "topic": "Lessons",
+    "notes": "Post #18 \u00b7 Lessons",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "c0d27fce-d04b-4315-b528-736a60a4bf9c",
+    "text": "Defaults matter more than advanced options. Most never change them.",
+    "scheduled_time": "2025-09-27T09:00:00-04:00",
+    "topic": "Lessons",
+    "notes": "Post #19 \u00b7 Lessons",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "ceacd9fc-e93f-4694-8e25-2d0245804d1e",
+    "text": "Feedback loops are faster than any roadmap.",
+    "scheduled_time": "2025-09-27T13:00:00-04:00",
+    "topic": "Lessons",
+    "notes": "Post #20 \u00b7 Lessons",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "4d32fe1a-52d7-4647-ada6-cc888c87bcd2",
+    "text": "The work gets better the moment I stop defending it.",
+    "scheduled_time": "2025-09-27T18:00:00-04:00",
+    "topic": "Lessons",
+    "notes": "Post #21 \u00b7 Lessons",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "e7670803-beaf-4a7f-aa90-ff28da08231f",
+    "text": "Every bug report is a gift. It means someone cared enough to break it.",
+    "scheduled_time": "2025-09-28T09:00:00-04:00",
+    "topic": "Lessons",
+    "notes": "Post #22 \u00b7 Lessons",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "9598590d-9d6f-4c00-968c-0fff50947bb1",
+    "text": "Validation is not asking if they\u2019d use it. It\u2019s watching them fail to.",
+    "scheduled_time": "2025-09-28T13:00:00-04:00",
+    "topic": "Lessons",
+    "notes": "Post #23 \u00b7 Lessons",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "be08dbde-7800-4cf4-90d7-eca7eb297652",
+    "text": "Eyebrows tell more than compliments. Watch faces.",
+    "scheduled_time": "2025-09-28T18:00:00-04:00",
+    "topic": "Lessons",
+    "notes": "Post #24 \u00b7 Lessons",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "c7a31a9f-5be9-4445-90b0-2f8ba91cbaa0",
+    "text": "The best insights are the ones that sting.",
+    "scheduled_time": "2025-09-29T09:00:00-04:00",
+    "topic": "Lessons",
+    "notes": "Post #25 \u00b7 Lessons",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "4c3e6b3e-e9c8-4d88-9239-0d0a885620c9",
+    "text": "Restraint is a skill. Every \u201cno\u201d is an act of progress.",
+    "scheduled_time": "2025-09-29T13:00:00-04:00",
+    "topic": "Lessons",
+    "notes": "Post #26 \u00b7 Lessons",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "26b0aa4d-ed93-46ca-926b-fe9a5b190958",
+    "text": "Ugly wireframes teach. Pretty ones hide problems.",
+    "scheduled_time": "2025-09-29T18:00:00-04:00",
+    "topic": "Lessons",
+    "notes": "Post #27 \u00b7 Lessons",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "1a32a950-1e79-4b62-9361-a88366b18fa4",
+    "text": "Progress is subtracting. Add only when subtraction stops teaching.",
+    "scheduled_time": "2025-09-30T09:00:00-04:00",
+    "topic": "Lessons",
+    "notes": "Post #28 \u00b7 Lessons",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "f4ccc5bb-791e-4a5e-94dc-3ed8a5376293",
+    "text": "The build is never finished. But it can always be paused.",
+    "scheduled_time": "2025-09-30T13:00:00-04:00",
+    "topic": "Lessons",
+    "notes": "Post #29 \u00b7 Lessons",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "aa4121da-9711-460a-81d8-09cf7f4aedd3",
+    "text": "Simple math beats fancy AI when the pain is sharp.",
+    "scheduled_time": "2025-09-30T18:00:00-04:00",
+    "topic": "Lessons",
+    "notes": "Post #30 \u00b7 Lessons",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "2a4dea0a-f442-475c-bdf3-e4a8701d1b0e",
+    "text": "Someone once told me: \u201cThis feels overwhelming.\u201d They were right. I cut half the flow.",
+    "scheduled_time": "2025-10-01T09:00:00-04:00",
+    "topic": "Feedback",
+    "notes": "Post #31 \u00b7 Feedback",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "6f1d02aa-5a3f-4fc5-ad40-db973353cdec",
+    "text": "Feedback hurts less when I frame it as co-design, not critique.",
+    "scheduled_time": "2025-10-01T13:00:00-04:00",
+    "topic": "Feedback",
+    "notes": "Post #32 \u00b7 Feedback",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "27c8e359-bdbe-432d-93db-8fc6078eb017",
+    "text": "Most valuable feedback I ever got was confusion, not praise.",
+    "scheduled_time": "2025-10-01T18:00:00-04:00",
+    "topic": "Feedback",
+    "notes": "Post #33 \u00b7 Feedback",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "b86fc5a4-0bfc-4e69-9b3f-52b1fcab07cb",
+    "text": "Silence in interviews forces truth out.",
+    "scheduled_time": "2025-10-02T09:00:00-04:00",
+    "topic": "Feedback",
+    "notes": "Post #34 \u00b7 Feedback",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "e6c309b5-4301-42c7-99cf-12364b80264e",
+    "text": "People rarely say \u201cthis is bad.\u201d They just stop using it. That\u2019s feedback too.",
+    "scheduled_time": "2025-10-02T13:00:00-04:00",
+    "topic": "Feedback",
+    "notes": "Post #35 \u00b7 Feedback",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "f282d9aa-fe58-4d1c-831c-a6c114f0f895",
+    "text": "Compliments feel nice, but complaints build products.",
+    "scheduled_time": "2025-10-02T18:00:00-04:00",
+    "topic": "Feedback",
+    "notes": "Post #36 \u00b7 Feedback",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "f83811a4-a37b-4b65-90fb-b05d81838bc1",
+    "text": "The feedback I dread hearing is usually the feedback I need.",
+    "scheduled_time": "2025-10-03T09:00:00-04:00",
+    "topic": "Feedback",
+    "notes": "Post #37 \u00b7 Feedback",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "ac159c02-d5e3-4291-8423-e9389e592b8a",
+    "text": "When three people repeat the same frustration, it\u2019s roadmap material.",
+    "scheduled_time": "2025-10-03T13:00:00-04:00",
+    "topic": "Feedback",
+    "notes": "Post #38 \u00b7 Feedback",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "4fe4fa3f-1a8a-4ca2-ac8a-16c7e74f8a97",
+    "text": "Feedback windows are small\u2014ask while the pain is fresh.",
+    "scheduled_time": "2025-10-03T18:00:00-04:00",
+    "topic": "Feedback",
+    "notes": "Post #39 \u00b7 Feedback",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "61562ad3-3996-4f5e-bdf1-eca10e0598e2",
+    "text": "Ignoring harsh feedback once cost me weeks.",
+    "scheduled_time": "2025-10-04T09:00:00-04:00",
+    "topic": "Feedback",
+    "notes": "Post #40 \u00b7 Feedback",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "8e1a1231-7bbd-4498-9d40-6f9895e8b912",
+    "text": "Feedback doesn\u2019t have to be followed, but it must be heard.",
+    "scheduled_time": "2025-10-04T13:00:00-04:00",
+    "topic": "Feedback",
+    "notes": "Post #41 \u00b7 Feedback",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "5f239134-e169-4722-9a96-985a1151821e",
+    "text": "Sometimes the most honest answer is confusion in their eyes.",
+    "scheduled_time": "2025-10-04T18:00:00-04:00",
+    "topic": "Feedback",
+    "notes": "Post #42 \u00b7 Feedback",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "c2a8dbeb-2ee9-44e8-b518-d9d87b9bc118",
+    "text": "Feedback without context is noise. With context, it\u2019s gold.",
+    "scheduled_time": "2025-10-05T09:00:00-04:00",
+    "topic": "Feedback",
+    "notes": "Post #43 \u00b7 Feedback",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "411960a7-3bc4-47e4-8af7-c7dd3e43fc46",
+    "text": "Every complaint hides a design flaw.",
+    "scheduled_time": "2025-10-05T13:00:00-04:00",
+    "topic": "Feedback",
+    "notes": "Post #44 \u00b7 Feedback",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "75f7070a-eeac-4f08-ac53-ed18cc3889a6",
+    "text": "Feedback is not the enemy. Indifference is.",
+    "scheduled_time": "2025-10-05T18:00:00-04:00",
+    "topic": "Feedback",
+    "notes": "Post #45 \u00b7 Feedback",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "c9f440a0-f3ed-4bb5-b617-855796e934ce",
+    "text": "Most of my regrets come from adding, not cutting.",
+    "scheduled_time": "2025-10-06T09:00:00-04:00",
+    "topic": "Restraint & Cutting",
+    "notes": "Post #46 \u00b7 Restraint & Cutting",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "fe1fd8cc-a425-4dce-827a-6bf1c5940f78",
+    "text": "Cutting feels like regression until you realize it unblocked the flow.",
+    "scheduled_time": "2025-10-06T13:00:00-04:00",
+    "topic": "Restraint & Cutting",
+    "notes": "Post #47 \u00b7 Restraint & Cutting",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "1b6c7fdd-1622-460e-9622-798ab6ad981f",
+    "text": "Every product is one cut away from clarity.",
+    "scheduled_time": "2025-10-06T18:00:00-04:00",
+    "topic": "Restraint & Cutting",
+    "notes": "Post #48 \u00b7 Restraint & Cutting",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "f00d834d-a848-455f-9938-b895cf75357c",
+    "text": "Launch days are flashy. Delete-a-feature days are transformative.",
+    "scheduled_time": "2025-10-07T09:00:00-04:00",
+    "topic": "Restraint & Cutting",
+    "notes": "Post #49 \u00b7 Restraint & Cutting",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "30812644-ec72-4c87-bb89-d21ba839f6da",
+    "text": "\u201cWhat if we just add\u2026\u201d is the first line of scope creep.",
+    "scheduled_time": "2025-10-07T13:00:00-04:00",
+    "topic": "Restraint & Cutting",
+    "notes": "Post #50 \u00b7 Restraint & Cutting",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "20014e1d-cf61-4c4c-a59e-375486fb8325",
+    "text": "One line of code can be progress. Deleting twenty can be more.",
+    "scheduled_time": "2025-10-07T18:00:00-04:00",
+    "topic": "Restraint & Cutting",
+    "notes": "Post #51 \u00b7 Restraint & Cutting",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "5c8b253a-be7b-4709-90ae-75f3ddb47734",
+    "text": "My proudest features are the ones I killed in time.",
+    "scheduled_time": "2025-10-08T09:00:00-04:00",
+    "topic": "Restraint & Cutting",
+    "notes": "Post #52 \u00b7 Restraint & Cutting",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "25c8cbd4-29ff-470a-a007-81f2787faa31",
+    "text": "I\u2019ve never regretted cutting. Only delaying it.",
+    "scheduled_time": "2025-10-08T13:00:00-04:00",
+    "topic": "Restraint & Cutting",
+    "notes": "Post #53 \u00b7 Restraint & Cutting",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "88e8c9f9-a971-4f95-a8a1-484802160a10",
+    "text": "Subtraction is design. Addition is distraction.",
+    "scheduled_time": "2025-10-08T18:00:00-04:00",
+    "topic": "Restraint & Cutting",
+    "notes": "Post #54 \u00b7 Restraint & Cutting",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "218132ab-122f-427d-82ee-2263d0322481",
+    "text": "Discipline is stopping mid-sentence when the feature itch kicks in.",
+    "scheduled_time": "2025-10-09T09:00:00-04:00",
+    "topic": "Restraint & Cutting",
+    "notes": "Post #55 \u00b7 Restraint & Cutting",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "765ec1a2-14a2-47c9-a164-e3b67cba3b30",
+    "text": "Cutting scope feels small. It\u2019s the only thing that scales.",
+    "scheduled_time": "2025-10-09T13:00:00-04:00",
+    "topic": "Restraint & Cutting",
+    "notes": "Post #56 \u00b7 Restraint & Cutting",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "caa0ad5c-985c-47a6-b239-3171af1aa37f",
+    "text": "A product that tries to do everything ends up doing nothing well.",
+    "scheduled_time": "2025-10-09T18:00:00-04:00",
+    "topic": "Restraint & Cutting",
+    "notes": "Post #57 \u00b7 Restraint & Cutting",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "3ebbbaf7-6aed-40a6-bfb2-30e8a0273a4c",
+    "text": "\u201cJust one more thing\u201d has sunk more projects than bugs ever did.",
+    "scheduled_time": "2025-10-10T09:00:00-04:00",
+    "topic": "Restraint & Cutting",
+    "notes": "Post #58 \u00b7 Restraint & Cutting",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "5c39d7db-ceba-491b-8220-54af1ff4eac6",
+    "text": "The less I build, the faster I learn.",
+    "scheduled_time": "2025-10-10T13:00:00-04:00",
+    "topic": "Restraint & Cutting",
+    "notes": "Post #59 \u00b7 Restraint & Cutting",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "f4cbf27b-a8b3-4927-8e9e-14a73fed1d69",
+    "text": "Every cut is an invisible feature: focus.",
+    "scheduled_time": "2025-10-10T18:00:00-04:00",
+    "topic": "Restraint & Cutting",
+    "notes": "Post #60 \u00b7 Restraint & Cutting",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "4fb56ec9-b6cf-4d35-a7cd-8e25433d5d39",
+    "text": "Validation feels slow. But every skipped conversation turns into wasted weeks.",
+    "scheduled_time": "2025-10-11T09:00:00-04:00",
+    "topic": "Validation & Discovery",
+    "notes": "Post #61 \u00b7 Validation & Discovery",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "79ab8d5c-3509-4a99-8a4a-9291bbd26b74",
+    "text": "Ten interviews > one polished deck.",
+    "scheduled_time": "2025-10-11T13:00:00-04:00",
+    "topic": "Validation & Discovery",
+    "notes": "Post #62 \u00b7 Validation & Discovery",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "fee2d4c3-fa09-48fa-9e47-21f1033162de",
+    "text": "\u201cWould you pay for this?\u201d reveals more than \u201cdo you like this?\u201d",
+    "scheduled_time": "2025-10-11T18:00:00-04:00",
+    "topic": "Validation & Discovery",
+    "notes": "Post #63 \u00b7 Validation & Discovery",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "a435e27c-078d-4380-ba50-b5efb5d70cc8",
+    "text": "The people who say \u201ccool idea\u201d are the least likely to use it.",
+    "scheduled_time": "2025-10-12T09:00:00-04:00",
+    "topic": "Validation & Discovery",
+    "notes": "Post #64 \u00b7 Validation & Discovery",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "1dd89309-fc27-489e-8882-d12d1bb74744",
+    "text": "Real validation starts when they reach for their wallet.",
+    "scheduled_time": "2025-10-12T13:00:00-04:00",
+    "topic": "Validation & Discovery",
+    "notes": "Post #65 \u00b7 Validation & Discovery",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "e355b7e9-1b1d-4153-a7d4-949f6ab4b5a1",
+    "text": "\u201cEveryone\u201d is not an audience. Be weirdly specific.",
+    "scheduled_time": "2025-10-12T18:00:00-04:00",
+    "topic": "Validation & Discovery",
+    "notes": "Post #66 \u00b7 Validation & Discovery",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "b185737c-ab8a-41e9-bf10-6e4afd5a8f97",
+    "text": "I once asked the wrong people for feedback. Built for them, not the ones in pain.",
+    "scheduled_time": "2025-10-13T09:00:00-04:00",
+    "topic": "Validation & Discovery",
+    "notes": "Post #67 \u00b7 Validation & Discovery",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "59d3af63-581f-4fa0-9b3c-7746b256141f",
+    "text": "Most assumptions crumble the moment you shut up and take notes.",
+    "scheduled_time": "2025-10-13T13:00:00-04:00",
+    "topic": "Validation & Discovery",
+    "notes": "Post #68 \u00b7 Validation & Discovery",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "c33166d2-52d2-45e3-abcc-31af42de6de4",
+    "text": "If you can\u2019t explain who it\u2019s for, you\u2019re building for no one.",
+    "scheduled_time": "2025-10-13T18:00:00-04:00",
+    "topic": "Validation & Discovery",
+    "notes": "Post #69 \u00b7 Validation & Discovery",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "34cad070-d7dc-43f5-b650-97f1d0409d93",
+    "text": "People rarely know what they want. But they know what annoys them.",
+    "scheduled_time": "2025-10-14T09:00:00-04:00",
+    "topic": "Validation & Discovery",
+    "notes": "Post #70 \u00b7 Validation & Discovery",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "d2ce31ab-6d73-4923-86a2-5acc07d4bc74",
+    "text": "Validation is less about ideas, more about observing coping mechanisms.",
+    "scheduled_time": "2025-10-14T13:00:00-04:00",
+    "topic": "Validation & Discovery",
+    "notes": "Post #71 \u00b7 Validation & Discovery",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "87e21544-7199-4d83-a64b-1b19ffb5c101",
+    "text": "A landing page teaches faster than a pitch.",
+    "scheduled_time": "2025-10-14T18:00:00-04:00",
+    "topic": "Validation & Discovery",
+    "notes": "Post #72 \u00b7 Validation & Discovery",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "17ea7988-070b-4f19-8aec-5e3ffbcd3392",
+    "text": "Asking what they *don\u2019t* like gets me further than asking what they do.",
+    "scheduled_time": "2025-10-15T09:00:00-04:00",
+    "topic": "Validation & Discovery",
+    "notes": "Post #73 \u00b7 Validation & Discovery",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "afe0fb64-fa9b-482a-99f3-2364451fb30d",
+    "text": "People reveal more in confusion than in praise.",
+    "scheduled_time": "2025-10-15T13:00:00-04:00",
+    "topic": "Validation & Discovery",
+    "notes": "Post #74 \u00b7 Validation & Discovery",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "ba071879-e147-4041-9bc9-2ce80ba510a4",
+    "text": "Listening is free. Rebuilding is expensive.",
+    "scheduled_time": "2025-10-15T18:00:00-04:00",
+    "topic": "Validation & Discovery",
+    "notes": "Post #75 \u00b7 Validation & Discovery",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "5509b034-339c-4d4c-b673-6d2b88b94a18",
+    "text": "Building in public is just leaving breadcrumbs for future-me.",
+    "scheduled_time": "2025-10-16T09:00:00-04:00",
+    "topic": "Mindset & Reflection",
+    "notes": "Post #76 \u00b7 Mindset & Reflection",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "13089d2e-3463-441e-aad4-608973b75614",
+    "text": "The moments I want to hide are the ones worth posting.",
+    "scheduled_time": "2025-10-16T13:00:00-04:00",
+    "topic": "Mindset & Reflection",
+    "notes": "Post #77 \u00b7 Mindset & Reflection",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "e7898b97-fdb5-46b4-9fe6-db6495d8a04d",
+    "text": "Progress doesn\u2019t look like speed. It looks like discipline.",
+    "scheduled_time": "2025-10-16T18:00:00-04:00",
+    "topic": "Mindset & Reflection",
+    "notes": "Post #78 \u00b7 Mindset & Reflection",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "f2653b40-aab7-4981-aa81-ac13c48eddbe",
+    "text": "Sharing the messy middle removes its power to shame me.",
+    "scheduled_time": "2025-10-17T09:00:00-04:00",
+    "topic": "Mindset & Reflection",
+    "notes": "Post #79 \u00b7 Mindset & Reflection",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "b75a7fc8-35b9-4410-888f-4c391b2f7f5e",
+    "text": "Perfectionism is just procrastination dressed up.",
+    "scheduled_time": "2025-10-17T13:00:00-04:00",
+    "topic": "Mindset & Reflection",
+    "notes": "Post #80 \u00b7 Mindset & Reflection",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "db03cdbe-59a6-4b1e-8f1e-dd3a1eec87c3",
+    "text": "Most of my learning comes disguised as embarrassment.",
+    "scheduled_time": "2025-10-17T18:00:00-04:00",
+    "topic": "Mindset & Reflection",
+    "notes": "Post #81 \u00b7 Mindset & Reflection",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "7184dd0a-4197-4a33-b089-f76b9e981708",
+    "text": "I don\u2019t need more motivation. I need more small launches.",
+    "scheduled_time": "2025-10-18T09:00:00-04:00",
+    "topic": "Mindset & Reflection",
+    "notes": "Post #82 \u00b7 Mindset & Reflection",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "956814e6-cbfb-4ab0-bf86-418fdc30eee1",
+    "text": "Burnout creeps in when I stop cutting scope.",
+    "scheduled_time": "2025-10-18T13:00:00-04:00",
+    "topic": "Mindset & Reflection",
+    "notes": "Post #83 \u00b7 Mindset & Reflection",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "1b2aba85-ac4b-4e55-8b51-cbe0b0257cdc",
+    "text": "My most productive days feel boring. Clarity often does.",
+    "scheduled_time": "2025-10-18T18:00:00-04:00",
+    "topic": "Mindset & Reflection",
+    "notes": "Post #84 \u00b7 Mindset & Reflection",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "57383abf-cc6a-4f42-80aa-0c5c1ccdd915",
+    "text": "Documenting while messy saves me from repeating mistakes.",
+    "scheduled_time": "2025-10-19T09:00:00-04:00",
+    "topic": "Mindset & Reflection",
+    "notes": "Post #85 \u00b7 Mindset & Reflection",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "2b31a63e-5c70-4623-b6f7-5a34d5eee7f0",
+    "text": "Shipping is exposure therapy. Each push makes fear smaller.",
+    "scheduled_time": "2025-10-19T13:00:00-04:00",
+    "topic": "Mindset & Reflection",
+    "notes": "Post #86 \u00b7 Mindset & Reflection",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "4061d495-4a4c-4695-ba00-50087369477a",
+    "text": "The build is never about proving genius. It\u2019s about proving pain exists.",
+    "scheduled_time": "2025-10-19T18:00:00-04:00",
+    "topic": "Mindset & Reflection",
+    "notes": "Post #87 \u00b7 Mindset & Reflection",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "4733c29b-e352-4dc1-abcf-7301980fef2b",
+    "text": "Honest reflection beats flawless execution. One builds trust, the other builds nothing.",
+    "scheduled_time": "2025-10-20T09:00:00-04:00",
+    "topic": "Mindset & Reflection",
+    "notes": "Post #88 \u00b7 Mindset & Reflection",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "0e08ec49-c3b4-45b4-9f3c-d639fe59e8ff",
+    "text": "If I\u2019m proud too early, I overbuilt. If I\u2019m embarrassed, I\u2019m on track.",
+    "scheduled_time": "2025-10-20T13:00:00-04:00",
+    "topic": "Mindset & Reflection",
+    "notes": "Post #89 \u00b7 Mindset & Reflection",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "342bc600-da6d-4e0d-b230-e955b90c8551",
+    "text": "The trail I\u2019m leaving isn\u2019t for vanity. It\u2019s for anyone else stumbling forward.",
+    "scheduled_time": "2025-10-20T18:00:00-04:00",
+    "topic": "Mindset & Reflection",
+    "notes": "Post #90 \u00b7 Mindset & Reflection",
+    "status": "pending",
+    "result": null
+  }
+]
