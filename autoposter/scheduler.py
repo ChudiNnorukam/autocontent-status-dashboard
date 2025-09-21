@@ -125,7 +125,7 @@ def plan_schedule(posts: Iterable[GeneratedPost], settings: Settings | None = No
     return scheduled
 
 
-def _process_queue(poster: XPoster, settings: Settings) -> None:
+def _process_queue(settings: Settings, dry_run: bool = False) -> None:
     queue = _load_queue(settings.post_queue_path)
     if not queue:
         return
@@ -133,6 +133,7 @@ def _process_queue(poster: XPoster, settings: Settings) -> None:
     tz = ZoneInfo(settings.timezone)
     now = datetime.now(tz)
     changed = False
+    poster: XPoster | None = None
 
     for item in queue:
         if item.status != "pending":
@@ -141,6 +142,9 @@ def _process_queue(poster: XPoster, settings: Settings) -> None:
             item.scheduled_time = item.scheduled_time.replace(tzinfo=tz)
         if item.scheduled_time > now:
             continue
+
+        if poster is None:
+            poster = XPoster(dry_run=dry_run)
 
         result = poster.post(item.text)
         changed = True
@@ -166,17 +170,14 @@ def _process_queue(poster: XPoster, settings: Settings) -> None:
 
 def process_queue_once(dry_run: bool = False) -> None:
     settings = get_settings()
-    poster = XPoster(dry_run=dry_run)
-    _process_queue(poster, settings)
+    _process_queue(settings, dry_run=dry_run)
 
 
 def start_scheduler(poll_seconds: int = 60, dry_run: bool = False) -> None:
     settings = get_settings()
-    poster = XPoster(dry_run=dry_run)
-
     scheduler = BlockingScheduler(timezone=settings.timezone)
     scheduler.add_job(
-        lambda: _process_queue(poster, settings),
+        lambda: _process_queue(settings, dry_run=dry_run),
         trigger=IntervalTrigger(seconds=poll_seconds),
         max_instances=1,
         coalesce=True,
