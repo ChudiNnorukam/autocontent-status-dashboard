@@ -33,7 +33,7 @@ jobs:
           OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
           TIMEZONE: ${{ secrets.TIMEZONE }}
         run: |
-          cat <<'EOF' > .env
+          cat <<EOF > .env
           X_HANDLE=${X_HANDLE}
           X_API_KEY=${X_API_KEY}
           X_API_SECRET=${X_API_SECRET}
