@@ -5,8 +5,12 @@
     "scheduled_time": "2025-09-21T09:00:00-04:00",
     "topic": "Mistakes",
     "notes": "Post #1 \u00b7 Mistakes",
-    "status": "pending",
-    "result": null
+    "status": "sent",
+    "result": {
+      "tweet_id": "1969768733406323042",
+      "posted_at": "2025-09-21T10:20:37.333043-04:00",
+      "dry_run": false
+    }
   },
   {
     "id": "9082ff3a-00f6-4753-8b02-934b37164ff9",
@@ -23,6 +27,24 @@
     "scheduled_time": "2025-09-21T18:00:00-04:00",
     "topic": "Mistakes",
     "notes": "Post #3 \u00b7 Mistakes",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "02e28591-bed8-452f-aa68-cc737b2691b0",
+    "text": "Long day behind me, a dozen small decisions I didn\u2019t see coming. I\u2019m tired, but I\u2019m thankful for what\u2019s surfaced. #reflection #gratitude #evening",
+    "scheduled_time": "2025-09-21T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "208c07dd-201c-4794-8cee-570c776939e6",
+    "text": "So many almost moments today\u2014ideas that didn\u2019t land, conversations unfinished. Still feels like growth. #selfreflection #humility #night",
+    "scheduled_time": "2025-09-21T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
     "status": "pending",
     "result": null
   },
@@ -54,6 +76,24 @@
     "result": null
   },
   {
+    "id": "c749f58e-59b6-4f5c-b0b2-13037e5f160e",
+    "text": "I catch myself replaying choices made in the afternoon, wondering how much was ego, how much was clarity. #reflection #leadership #evening",
+    "scheduled_time": "2025-09-22T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "a519cc1d-0ced-4859-a545-166993907cc4",
+    "text": "The quiet now is strange after all the noise. It\u2019s where I feel the lessons settling. #reflection #growthmindset #goodnight",
+    "scheduled_time": "2025-09-22T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
     "id": "f1e84c2a-0521-4b82-8b58-11cf42c6b85b",
     "text": "I thought silence meant interest. It actually meant irrelevance.\n\n#BuildInPublic #Entrepreneurship",
     "scheduled_time": "2025-09-23T09:00:00-04:00",
@@ -77,6 +117,24 @@
     "scheduled_time": "2025-09-23T18:00:00-04:00",
     "topic": "Mistakes",
     "notes": "Post #9 \u00b7 Mistakes",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "97be82fe-8b6b-4ee0-ab2d-65f58cbc3790",
+    "text": "Saw things break today\u2014in code, in expectations, in my own plans. I\u2019m grounding myself on what still holds. #humility #careerjourney #night",
+    "scheduled_time": "2025-09-23T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "805b7af6-9206-4402-b8c1-37f9dbd7c3e5",
+    "text": "Evening feels like limbo\u2014the work\u2019s done, but the reflection hasn\u2019t caught up with the day\u2019s momentum. #reflection #leadership #night",
+    "scheduled_time": "2025-09-23T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
     "status": "pending",
     "result": null
   },
@@ -108,6 +166,24 @@
     "result": null
   },
   {
+    "id": "9933a4c3-3ee4-448b-a2a0-4b681e0818bb",
+    "text": "Sometimes the day feels like one long echo of mistakes. I can already feel tomorrow whispering what to do differently. #selfreflection #gratitude #evening",
+    "scheduled_time": "2025-09-24T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "2901174a-f130-44cb-b714-1b62cb99aa53",
+    "text": "I noticed how many times I defended ideas today instead of listening. That\u2019s weight I carry to bed. #humility #reflection #night",
+    "scheduled_time": "2025-09-24T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
     "id": "711687d4-08af-4c5f-85ee-6696f0c11e24",
     "text": "Thought pricing tiers proved maturity. They just confused people.\n\n#BuildInPublic #ProductDesign",
     "scheduled_time": "2025-09-25T09:00:00-04:00",
@@ -131,6 +207,24 @@
     "scheduled_time": "2025-09-25T18:00:00-04:00",
     "topic": "Mistakes",
     "notes": "Post #15 \u00b7 Mistakes",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "5492a2aa-e409-4fff-9561-e16f5e3128f9",
+    "text": "Found a quiet moment by sunset\u2014remembered why I started this path. Even the hard bits seem sweeter then. #gratitude #careerpath #evening",
+    "scheduled_time": "2025-09-25T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "a5cf2b66-e8b9-4201-af2a-8894f8353a8e",
+    "text": "There\u2019s humility in looking back at what felt urgent and seeing it in new light. Urgency shifts by moonlight. #reflection #growthmindset #night",
+    "scheduled_time": "2025-09-25T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
     "status": "pending",
     "result": null
   },
@@ -162,6 +256,24 @@
     "result": null
   },
   {
+    "id": "1b6c3817-3490-4214-b40a-a2e2189ba59c",
+    "text": "Tonight I\u2019m thinking about momentum: what pushed me forward, what held me back. All of it shapes the story. #careerjourney #reflection #evening",
+    "scheduled_time": "2025-09-26T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "af6586c0-d057-40bb-937e-0a2e23ba7427",
+    "text": "I held space for possibilities today. Some slipped away, some stayed. The ones that stay keep me curious. #gratitude #selfreflection #night",
+    "scheduled_time": "2025-09-26T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
     "id": "c0d27fce-d04b-4315-b528-736a60a4bf9c",
     "text": "Defaults matter more than advanced options. Most never change them.\n\n#BuildInPublic #Process",
     "scheduled_time": "2025-09-27T09:00:00-04:00",
@@ -185,6 +297,24 @@
     "scheduled_time": "2025-09-27T18:00:00-04:00",
     "topic": "Lessons",
     "notes": "Post #21 \u00b7 Lessons",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "d16a1e47-3cf7-4ad0-935f-4912bbcb0263",
+    "text": "After hours of doing I find value in just being\u2014letting my thoughts settle before dreaming again. #reflection #humility #goodnight",
+    "scheduled_time": "2025-09-27T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "71655c3c-c4d3-4376-bdfe-50b782170a8c",
+    "text": "Mistakes showed up loud today. I admit I resisted. But I also heard what I was avoiding. #growthmindset #night #reflection",
+    "scheduled_time": "2025-09-27T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
     "status": "pending",
     "result": null
   },
@@ -216,6 +346,24 @@
     "result": null
   },
   {
+    "id": "de2765e9-3466-4503-b986-14dd5ee05b9e",
+    "text": "Evening quiet is teaching me patience\u2014especially with myself. So many drafts, so little polish. That\u2019s okay. #humility #selfreflection #evening",
+    "scheduled_time": "2025-09-28T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "d0b25fff-b7fa-4aa1-a68d-610e3444ffe4",
+    "text": "Things felt broken today, but I found threads that weren\u2019t. Those threads are enough to rest on. #gratitude #reflection #night",
+    "scheduled_time": "2025-09-28T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
     "id": "c7a31a9f-5be9-4445-90b0-2f8ba91cbaa0",
     "text": "The best insights are the ones that sting.\n\n#BuildInPublic #ProductDesign",
     "scheduled_time": "2025-09-29T09:00:00-04:00",
@@ -239,6 +387,24 @@
     "scheduled_time": "2025-09-29T18:00:00-04:00",
     "topic": "Lessons",
     "notes": "Post #27 \u00b7 Lessons",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "02973527-8f92-4380-96b6-d0b25a60d469",
+    "text": "I kept pushing until I realized rest is part of progress. Letting the mind pause has its own strength. #selfreflection #goodnight #growthmindset",
+    "scheduled_time": "2025-09-29T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "fe8c5957-8af6-4521-8f2e-95f84996e3ad",
+    "text": "Lost time chasing clarity. Found clarity in letting go of the chase. Strange relief in that. #reflection #humility #evening",
+    "scheduled_time": "2025-09-29T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
     "status": "pending",
     "result": null
   },
@@ -270,6 +436,24 @@
     "result": null
   },
   {
+    "id": "19addb53-93f1-4ea5-98cb-87c2d5d43b6b",
+    "text": "I\u2019m carrying forward what I learned today\u2014both the wins that felt small and the \u201cfailures\u201d that weren\u2019t all bad. #careerjourney #gratitude #night",
+    "scheduled_time": "2025-09-30T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "aec3c078-eccf-4fed-b96a-9fc9007d45d5",
+    "text": "By the end of this day I knew I\u2019d missed comfort. But I also saw what discomfort might teach. #reflection #humility #evening",
+    "scheduled_time": "2025-09-30T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
     "id": "2a4dea0a-f442-475c-bdf3-e4a8701d1b0e",
     "text": "Someone once told me: \u201cThis feels overwhelming.\u201d They were right. I cut half the flow.\n\n#BuildInPublic #BusinessGrowth",
     "scheduled_time": "2025-10-01T09:00:00-04:00",
@@ -293,6 +477,24 @@
     "scheduled_time": "2025-10-01T18:00:00-04:00",
     "topic": "Feedback",
     "notes": "Post #33 \u00b7 Feedback",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "d75b7e69-4685-462b-9b6a-9b90b39ffbfd",
+    "text": "Today a conversation stopped me in my tracks. I wasn\u2019t sure how to respond. Lesson: I\u2019m still learning. #reflection #growthmindset #night",
+    "scheduled_time": "2025-10-01T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "e5843daf-a076-48b6-81bc-e3d7ac27e4b8",
+    "text": "Evening feels like a mirror. All the things I didn\u2019t want to see during daylight show up quietly. #selfreflection #humility #goodnight",
+    "scheduled_time": "2025-10-01T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
     "status": "pending",
     "result": null
   },
@@ -324,6 +526,24 @@
     "result": null
   },
   {
+    "id": "126e7d66-1528-4087-b363-f1e65125c8e3",
+    "text": "I realize how often I build for impact others will see instead of what I\u2019ll feel is real. Something to wrestle with. #reflection #careerpath #evening",
+    "scheduled_time": "2025-10-02T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "bccc0707-83d2-4c07-ab4e-0ad37499c98c",
+    "text": "The victories today were quiet\u2014solving a bug, being kinder in tone, noticing when I was tired. Those count. #gratitude #reflection #night",
+    "scheduled_time": "2025-10-02T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
     "id": "f83811a4-a37b-4b65-90fb-b05d81838bc1",
     "text": "The feedback I dread hearing is usually the feedback I need.\n\n#BuildInPublic #Entrepreneurship",
     "scheduled_time": "2025-10-03T09:00:00-04:00",
@@ -347,6 +567,24 @@
     "scheduled_time": "2025-10-03T18:00:00-04:00",
     "topic": "Feedback",
     "notes": "Post #39 \u00b7 Feedback",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "a1c290fd-2d4f-4009-afc6-b3f513363aad",
+    "text": "I\u2019m softer tonight. Less harsh in judgment. More willing to sit with ambiguity. #humility #selfreflection #evening",
+    "scheduled_time": "2025-10-03T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "09a05435-4dbc-43db-94d3-d7b5354c0d93",
+    "text": "Day\u2019s end shadows show what I left unresolved. That\u2019s not failure\u2014just things to revisit. #reflection #growthmindset #night",
+    "scheduled_time": "2025-10-03T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
     "status": "pending",
     "result": null
   },
@@ -378,6 +616,24 @@
     "result": null
   },
   {
+    "id": "369ffec5-1aad-45d9-bfdf-f15a48362291",
+    "text": "I thought I was far from where I wanted to be. But today I glimpsed pieces of that future. That helps. #careerjourney #gratitude #evening",
+    "scheduled_time": "2025-10-04T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "60e1149a-f450-4dc9-aa36-0d6b748e3f77",
+    "text": "Saw someone else\u2019s strength today and felt both inspired and small. Both feelings are okay together. #reflection #humility #night",
+    "scheduled_time": "2025-10-04T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
     "id": "c2a8dbeb-2ee9-44e8-b518-d9d87b9bc118",
     "text": "Feedback without context is noise. With context, it\u2019s gold.\n\n#BuildInPublic #Startups",
     "scheduled_time": "2025-10-05T09:00:00-04:00",
@@ -401,6 +657,24 @@
     "scheduled_time": "2025-10-05T18:00:00-04:00",
     "topic": "Feedback",
     "notes": "Post #45 \u00b7 Feedback",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "c42cab25-ee86-42d3-abbb-7729f59c49d6",
+    "text": "I built momentum today, even if I only felt it in my chest. Tomorrow I hope to feel it in my bones. #growthmindset #reflection #evening",
+    "scheduled_time": "2025-10-05T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "669141cc-6e0a-4008-9954-d24e395ab32a",
+    "text": "Quiet now: I\u2019m trying to be proud of what held up today. Some things cracked\u2014but not everything. #gratitude #selfreflection #night",
+    "scheduled_time": "2025-10-05T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
     "status": "pending",
     "result": null
   },
@@ -432,6 +706,24 @@
     "result": null
   },
   {
+    "id": "738b0744-6aa8-4199-8ae5-844c2626f6f3",
+    "text": "I realize I still search for certainty, even when uncertainty is the main character of the story. #reflection #humility #evening",
+    "scheduled_time": "2025-10-06T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "0b78b2ab-3bb0-4f5c-9f56-4fd2f80d2c5b",
+    "text": "There were moments I overthought today. Others I didn\u2019t think enough. Both made me tired. #growthmindset #reflection #goodnight",
+    "scheduled_time": "2025-10-06T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
     "id": "f00d834d-a848-455f-9938-b895cf75357c",
     "text": "Launch days are flashy. Delete-a-feature days are transformative.\n\n#BuildInPublic #Process",
     "scheduled_time": "2025-10-07T09:00:00-04:00",
@@ -455,6 +747,24 @@
     "scheduled_time": "2025-10-07T18:00:00-04:00",
     "topic": "Restraint & Cutting",
     "notes": "Post #51 \u00b7 Restraint & Cutting",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "ec311ecb-4404-44e6-aabd-405fce44b0ee",
+    "text": "Evening reminds me that sometimes rest is more productive than pushing. I resisted that today. #selfreflection #gratitude #night",
+    "scheduled_time": "2025-10-07T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "88bab887-1cad-4646-a1b0-f9b8f2402317",
+    "text": "I wrote a lot. Some of it might be wrong. I let that feel okay. #reflection #humility #evening",
+    "scheduled_time": "2025-10-07T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
     "status": "pending",
     "result": null
   },
@@ -486,6 +796,24 @@
     "result": null
   },
   {
+    "id": "3f8800a4-2c4d-4134-a430-55fd8dd52b26",
+    "text": "The weight of \u201cshould have\u2019s\u201d feels heavier at night. I\u2019m offering myself grace before sleep. #gratitude #reflection #night",
+    "scheduled_time": "2025-10-08T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "ed1ee545-7eba-4826-a251-924b5249b68f",
+    "text": "I saw my assumptions today, wearing them like armor. I\u2019m ready to try lighter next time. #selfreflection #humility #evening",
+    "scheduled_time": "2025-10-08T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
     "id": "218132ab-122f-427d-82ee-2263d0322481",
     "text": "Discipline is stopping mid-sentence when the feature itch kicks in.\n\n#BuildInPublic #ProductDesign",
     "scheduled_time": "2025-10-09T09:00:00-04:00",
@@ -509,6 +837,24 @@
     "scheduled_time": "2025-10-09T18:00:00-04:00",
     "topic": "Restraint & Cutting",
     "notes": "Post #57 \u00b7 Restraint & Cutting",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "fbf397cf-f6b9-4f75-84b8-e35ae27c772d",
+    "text": "Small wins tonight: finishing something, choosing peace, letting a criticism land without fighting back. #growthmindset #reflection #night",
+    "scheduled_time": "2025-10-09T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "14503d93-ad62-4ffb-a053-a9964e2846c8",
+    "text": "The loudest thoughts today were the ones I didn\u2019t speak. I carry them into silence now. #reflection #careerjourney #evening",
+    "scheduled_time": "2025-10-09T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
     "status": "pending",
     "result": null
   },
@@ -540,6 +886,24 @@
     "result": null
   },
   {
+    "id": "18b5107b-e749-4b65-b938-802bc418ab7c",
+    "text": "I catch ideas in the dark, half-formed, and wonder which of them will survive morning. #selfreflection #growthmindset #night",
+    "scheduled_time": "2025-10-10T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "ffd8e152-a223-47f4-85e3-41fa20eab6b6",
+    "text": "Today was messy. Beautiful parts, ugly parts. I\u2019m grateful for both. #gratitude #reflection #evening",
+    "scheduled_time": "2025-10-10T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
     "id": "4fb56ec9-b6cf-4d35-a7cd-8e25433d5d39",
     "text": "Validation feels slow. But every skipped conversation turns into wasted weeks.\n\n#BuildInPublic #BusinessGrowth",
     "scheduled_time": "2025-10-11T09:00:00-04:00",
@@ -563,6 +927,24 @@
     "scheduled_time": "2025-10-11T18:00:00-04:00",
     "topic": "Validation & Discovery",
     "notes": "Post #63 \u00b7 Validation & Discovery",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "6c2afb71-013c-42db-bfa7-c7f7b3392cf9",
+    "text": "After the flurry of tasks I\u2019m wondering: what if I listened more than I pushed? #reflection #humility #night",
+    "scheduled_time": "2025-10-11T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "dc0d6c6f-b7e8-4848-bf48-64571059888b",
+    "text": "The day demanded certainty I didn\u2019t have. I showed up anyway, with trembling confidence. #growthmindset #reflection #evening",
+    "scheduled_time": "2025-10-11T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
     "status": "pending",
     "result": null
   },
@@ -594,6 +976,24 @@
     "result": null
   },
   {
+    "id": "9650eeb6-223b-4120-86d7-75713b6cf475",
+    "text": "I noticed how easy it was to ignore discomfort. I\u2019m trying now to pay attention to it. #selfreflection #humility #goodnight",
+    "scheduled_time": "2025-10-12T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "e92940f8-ce68-439d-935d-d51943c09d29",
+    "text": "Evening: I see how far I\u2019ve come not by comparing to others but by seeing where I was last year. #gratitude #reflection #night",
+    "scheduled_time": "2025-10-12T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
     "id": "b185737c-ab8a-41e9-bf10-6e4afd5a8f97",
     "text": "I once asked the wrong people for feedback. Built for them, not the ones in pain.\n\n#BuildInPublic #Learning",
     "scheduled_time": "2025-10-13T09:00:00-04:00",
@@ -617,6 +1017,24 @@
     "scheduled_time": "2025-10-13T18:00:00-04:00",
     "topic": "Validation & Discovery",
     "notes": "Post #69 \u00b7 Validation & Discovery",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "767f6035-ee06-4b09-9241-2f375b712f54",
+    "text": "My mind is full of drafts now\u2014of future talks, code, projects. Tomorrow I\u2019ll sift which are worth keeping. #careerjourney #reflection #evening",
+    "scheduled_time": "2025-10-13T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "26abb5ba-fdac-4961-a640-c96bb5b3a980",
+    "text": "Sometimes I feel like I built walls for protection. Tonight I wonder how many of them are unhelpful. #humility #reflection #night",
+    "scheduled_time": "2025-10-13T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
     "status": "pending",
     "result": null
   },
@@ -648,6 +1066,24 @@
     "result": null
   },
   {
+    "id": "f51d1d14-5814-4aa5-ba81-8d25c7f6ae74",
+    "text": "I\u2019m grateful for rest, though I sometimes resent that expected stillness. It\u2019s teaching me something. #selfreflection #gratitude #evening",
+    "scheduled_time": "2025-10-14T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "09879bf6-191e-4166-bcff-36a37fb3e007",
+    "text": "The failures today feel sharper than successes. But at least I saw them. That counts. #reflection #humility #night",
+    "scheduled_time": "2025-10-14T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
     "id": "17ea7988-070b-4f19-8aec-5e3ffbcd3392",
     "text": "Asking what they *don\u2019t* like gets me further than asking what they do.\n\n#BuildInPublic #Process",
     "scheduled_time": "2025-10-15T09:00:00-04:00",
@@ -671,6 +1107,24 @@
     "scheduled_time": "2025-10-15T18:00:00-04:00",
     "topic": "Validation & Discovery",
     "notes": "Post #75 \u00b7 Validation & Discovery",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "387048e6-55f3-47db-8172-e7b086d557d8",
+    "text": "I thought I had lost momentum halfway through. Then I remember: showing up is momentum too. #growthmindset #reflection #evening",
+    "scheduled_time": "2025-10-15T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "b1d3cdc5-7c5e-4c07-b833-313a39aafa7a",
+    "text": "By the end of the day, I\u2019m quieter, softer. Less certain. And maybe that\u2019s good. #reflection #careerjourney #night",
+    "scheduled_time": "2025-10-15T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
     "status": "pending",
     "result": null
   },
@@ -702,6 +1156,24 @@
     "result": null
   },
   {
+    "id": "12f3e921-0a5f-4947-a684-a6f7288b5748",
+    "text": "I saw parts of myself I didn\u2019t expect: the brave, the afraid, the grateful. All sitting side by side. #selfreflection #humility #evening",
+    "scheduled_time": "2025-10-16T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "c98469fd-75af-4921-a342-77cf3bc8c94c",
+    "text": "End of day confusion: when I don\u2019t know what\u2019s next, but I trust I\u2019ll figure some things out in morning. #reflection #growthmindset #night",
+    "scheduled_time": "2025-10-16T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
     "id": "f2653b40-aab7-4981-aa81-ac13c48eddbe",
     "text": "Sharing the messy middle removes its power to shame me.\n\n#BuildInPublic #Startups",
     "scheduled_time": "2025-10-17T09:00:00-04:00",
@@ -725,6 +1197,24 @@
     "scheduled_time": "2025-10-17T18:00:00-04:00",
     "topic": "Mindset & Reflection",
     "notes": "Post #81 \u00b7 Mindset & Reflection",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "9d666fc6-db1a-4fda-a724-879e5c84c7fe",
+    "text": "Screwed up something today\u2014maybe more than once. Still, I got up, rewrote, re-tried. That\u2019s something. #humility #reflection #evening",
+    "scheduled_time": "2025-10-17T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "24b47bae-53c3-4430-b7cf-47f0bec2934e",
+    "text": "Gratitude sneaks in: moments of laughter, of unexpected kindness, of knowing I\u2019m not alone. #gratitude #reflection #night",
+    "scheduled_time": "2025-10-17T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
     "status": "pending",
     "result": null
   },
@@ -756,6 +1246,24 @@
     "result": null
   },
   {
+    "id": "da3b535c-7e48-4767-b9da-74022905490d",
+    "text": "I\u2019m letting go of \u201cperfect finish lines.\u201d The messy, ongoing projects are where I grow most. #careerjourney #reflection #evening",
+    "scheduled_time": "2025-10-18T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "7a2f22dd-3a08-42bd-9d3c-460ac2dbfcd9",
+    "text": "Evening light softens sharp edges. My regrets feel softer in this light. #reflection #humility #goodnight",
+    "scheduled_time": "2025-10-18T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
     "id": "57383abf-cc6a-4f42-80aa-0c5c1ccdd915",
     "text": "Documenting while messy saves me from repeating mistakes.\n\n#BuildInPublic #StartupLife",
     "scheduled_time": "2025-10-19T09:00:00-04:00",
@@ -783,6 +1291,24 @@
     "result": null
   },
   {
+    "id": "42b40d87-2cdb-46cb-aa47-24c3130f2f14",
+    "text": "So much of today felt routine. Then I paused and realized some of those routines are anchors. #gratitude #reflection #night",
+    "scheduled_time": "2025-10-19T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "557c231c-59f6-4a14-8104-73156ff7f9a7",
+    "text": "My ambition carried me far today. My humility will carry me further. #growthmindset #reflection #evening",
+    "scheduled_time": "2025-10-19T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
     "id": "4733c29b-e352-4dc1-abcf-7301980fef2b",
     "text": "Honest reflection beats flawless execution. One builds trust, the other builds nothing.\n\n#BuildInPublic #Innovation",
     "scheduled_time": "2025-10-20T09:00:00-04:00",
@@ -806,6 +1332,24 @@
     "scheduled_time": "2025-10-20T18:00:00-04:00",
     "topic": "Mindset & Reflection",
     "notes": "Post #90 \u00b7 Mindset & Reflection",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "ac208db2-6a00-4673-935c-4c1795326993",
+    "text": "There are days the spawn of one idea can carry me till late. Tonight I feel the weight of ideas. #selfreflection #careerjourney #night",
+    "scheduled_time": "2025-10-20T20:00:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
+    "status": "pending",
+    "result": null
+  },
+  {
+    "id": "514ad456-be59-4f12-b31e-4c71a0b1991c",
+    "text": "I hope by tomorrow I remember this: what I learned today, I earned. Not everything has to be polished for it to matter. #gratitude #reflection #evening",
+    "scheduled_time": "2025-10-20T23:30:00-04:00",
+    "topic": "Evening Reflection",
+    "notes": "Evening reflection queue addition",
     "status": "pending",
     "result": null
   }
