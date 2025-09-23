@@ -32,8 +32,13 @@
     "scheduled_time": "2025-09-22T20:00:00-04:00",
     "topic": "Mistakes",
     "notes": "Post #3 \u00b7 Mistakes",
-    "status": "pending",
-    "result": null
+    "status": "sent",
+    "result": {
+      "tweet_id": null,
+      "posted_at": "2025-09-23T01:37:31.962950-04:00",
+      "dry_run": false,
+      "note": "Removed due to duplicate posting concern."
+    }
   },
   {
     "id": "02e28591-bed8-452f-aa68-cc737b2691b0",
