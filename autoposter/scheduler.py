@@ -75,6 +75,19 @@ def _export_queue_snapshot(repo: QueueRepository, path: Path) -> None:
     path.write_text(json.dumps(items, indent=2), encoding="utf-8")
 
 
+def _preferred_times(settings: Settings) -> List[time]:
+    slots: List[time] = []
+    for entry in settings.preferred_posting_times:
+        try:
+            hour_str, minute_str = entry.split(":", 1)
+            slots.append(time(int(hour_str), int(minute_str)))
+        except ValueError as exc:
+            raise ValueError(f"Invalid preferred posting time: {entry}") from exc
+    if not slots:
+        raise ValueError("preferred_posting_times must contain at least one value")
+    return slots
+
+
 def _generate_time_slots(settings: Settings, count: int) -> List[datetime]:
     tz = ZoneInfo(settings.timezone)
     now = datetime.now(tz)
@@ -86,8 +99,8 @@ def _generate_time_slots(settings: Settings, count: int) -> List[datetime]:
 
     while len(slots) < count and day_offset < settings.scheduling_window_days:
         current_date = (start.date() + timedelta(days=day_offset))
-        for hour in settings.preferred_posting_hours:
-            candidate = datetime.combine(current_date, time(hour=hour), tzinfo=tz)
+        for window_time in _preferred_times(settings):
+            candidate = datetime.combine(current_date, window_time, tzinfo=tz)
             if candidate < start:
                 continue
             if last_time and (candidate - last_time).total_seconds() < settings.min_hours_between_posts * 3600:

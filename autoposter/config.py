@@ -32,7 +32,10 @@ class Settings(BaseSettings):
     queue_db_path: Path = Field(default=Path("data/queue.db"))
     scheduling_window_days: int = Field(default=7, ge=1, le=30)
     min_hours_between_posts: float = Field(default=6.0, ge=0.5)
-    preferred_posting_hours: list[int] = Field(default_factory=lambda: [9, 12, 18])
+    preferred_posting_hours: list[int] | None = Field(default=None)
+    preferred_posting_times: list[str] = Field(
+        default_factory=lambda: ["06:00", "10:00", "15:00", "20:00", "23:30"]
+    )
     post_lead_time_minutes: int = Field(default=15, ge=0)
 
     x_api_key: SecretStr | None = Field(default=None, env=["X_API_KEY", "X_TWITTER_API_KEY"])
@@ -52,7 +55,9 @@ class Settings(BaseSettings):
         case_sensitive = False
 
     @validator("preferred_posting_hours", pre=True)
-    def _ensure_int_hours(cls, value: Any) -> list[int]:
+    def _parse_posting_hours(cls, value: Any) -> list[int] | None:
+        if value in (None, "", []):
+            return None
         if isinstance(value, str):
             try:
                 parsed = json.loads(value)
@@ -62,6 +67,19 @@ class Settings(BaseSettings):
                 pass
             return [int(part.strip()) for part in value.split(",") if part.strip()]
         return [int(v) for v in value]
+
+    @validator("preferred_posting_times", pre=True)
+    def _parse_posting_times(cls, value: Any, values: dict[str, Any]) -> list[str]:
+        if values.get("preferred_posting_hours"):
+            return [f"{hour:02d}:00" for hour in values["preferred_posting_hours"]]
+        if isinstance(value, str):
+            try:
+                parsed = json.loads(value)
+                if isinstance(parsed, list):
+                    value = parsed
+            except json.JSONDecodeError:
+                value = [part.strip() for part in value.split(",") if part.strip()]
+        return [str(v) for v in value]
 
     @property
     def data_path(self) -> Path:
