@@ -22,4 +22,4 @@ venv/
 
 # Logs
 *.log
-
+data/queue.db
