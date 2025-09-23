@@ -7,9 +7,7 @@ from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
 from typing import Iterable, Sequence
-
-
-ISO_FORMAT = "%Y-%m-%dT%H:%M:%S%z"
+from zoneinfo import ZoneInfo
 
 
 @dataclass(slots=True)
@@ -200,3 +198,39 @@ class QueueRepository:
             "created_at": now_iso,
             "updated_at": now_iso,
         }
+
+
+def bootstrap_from_json(repo: QueueRepository, queue_json: Path) -> None:
+    """Seed the SQLite queue from a legacy JSON file if the DB is empty."""
+
+    if not queue_json.exists():
+        return
+
+    with closing(repo._connect()) as conn:
+        count = conn.execute("SELECT COUNT(1) FROM posts").fetchone()[0]
+        if count:
+            return
+
+    data = json.loads(queue_json.read_text(encoding="utf-8"))
+    tz = ZoneInfo("America/New_York")
+    items: list[QueueItem] = []
+    for entry in data:
+        scheduled = datetime.fromisoformat(entry["scheduled_time"])
+        if scheduled.tzinfo is None:
+            scheduled = scheduled.replace(tzinfo=tz)
+        items.append(
+            QueueItem(
+                id=entry["id"],
+                text=entry["text"],
+                topic=entry.get("topic"),
+                notes=entry.get("notes"),
+                scheduled_at=scheduled,
+                status=entry.get("status", "pending"),
+                result=entry.get("result"),
+                attempt_count=entry.get("attempt_count", 0),
+                hash=entry.get("hash"),
+            )
+        )
+
+    if items:
+        repo.upsert_items(items)

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-import json
-
+from contextlib import closing
 
 import typer
 from .config import get_settings
 from .scheduler import process_queue_once, start_scheduler
+from .storage import QueueRepository, bootstrap_from_json
 from .workflows import (
     end_to_end_run,
     generate_content_plan,
@@ -67,15 +67,18 @@ def show_queue() -> None:
     """Display the current posting queue."""
 
     settings = get_settings()
-    path = settings.post_queue_path
-    if not path.exists():
-        typer.echo("Queue file does not exist yet. Run the schedule command first.")
+    repo = QueueRepository(settings.queue_db_path)
+    bootstrap_from_json(repo, settings.post_queue_path)
+
+    with closing(repo._connect()) as conn:
+        rows = conn.execute("SELECT * FROM posts ORDER BY scheduled_at ASC").fetchall()
+    if not rows:
+        typer.echo("Queue is empty. Schedule posts first.")
         raise typer.Exit(code=0)
 
-    data = json.loads(path.read_text(encoding="utf-8"))
-    for item in data:
+    for row in rows:
         typer.echo(
-            f"[{item.get('status', 'pending')}] {item.get('scheduled_time')} - {item.get('text')[:100]}"
+            f"[{row['status']}] {row['scheduled_at']} - {row['text'][:100]}"
         )
 
 

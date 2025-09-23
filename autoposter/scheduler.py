@@ -2,8 +2,10 @@ from __future__ import annotations
 
 import json
 import uuid
+from contextlib import closing
 from dataclasses import dataclass, field
 from datetime import datetime, time, timedelta
+from hashlib import sha256
 from pathlib import Path
 from typing import Iterable, List
 
@@ -14,6 +16,7 @@ from zoneinfo import ZoneInfo
 from .config import Settings, get_settings
 from .content_generator import GeneratedPost
 from .poster import XPoster
+from .storage import QueueItem, QueueRepository, bootstrap_from_json
 
 
 @dataclass
@@ -50,16 +53,26 @@ class ScheduledPost:
         )
 
 
-def _load_queue(path: Path) -> List[ScheduledPost]:
-    if not path.exists():
-        return []
-    data = json.loads(path.read_text(encoding="utf-8"))
-    return [ScheduledPost.from_dict(item) for item in data]
-
-
-def _save_queue(path: Path, queue: Iterable[ScheduledPost]) -> None:
-    payload = [item.to_dict() for item in queue]
-    path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+def _export_queue_snapshot(repo: QueueRepository, path: Path) -> None:
+    with closing(repo._connect()) as conn:
+        rows = conn.execute("SELECT * FROM posts ORDER BY scheduled_at ASC").fetchall()
+    items = []
+    for row in rows:
+        scheduled = datetime.fromisoformat(row["scheduled_at"])  # stored in ISO form
+        if scheduled.tzinfo is None:
+            scheduled = scheduled.replace(tzinfo=ZoneInfo("America/New_York"))
+        items.append(
+            ScheduledPost(
+                id=row["id"],
+                text=row["text"],
+                scheduled_time=scheduled,
+                topic=row["topic"],
+                notes=row["notes"],
+                status=row["status"],
+                result=json.loads(row["result"]) if row["result"] else None,
+            ).to_dict()
+        )
+    path.write_text(json.dumps(items, indent=2), encoding="utf-8")
 
 
 def _generate_time_slots(settings: Settings, count: int) -> List[datetime]:
@@ -90,9 +103,11 @@ def _generate_time_slots(settings: Settings, count: int) -> List[datetime]:
 
 def plan_schedule(posts: Iterable[GeneratedPost], settings: Settings | None = None) -> List[ScheduledPost]:
     settings = settings or get_settings()
-    queue = _load_queue(settings.post_queue_path)
+    repo = QueueRepository(settings.queue_db_path)
+    bootstrap_from_json(repo, settings.post_queue_path)
 
-    existing_times = [item.scheduled_time for item in queue if item.status == "pending"]
+    pending_items = repo.list_pending()
+    existing_times = [item.scheduled_at for item in pending_items]
     tz = ZoneInfo(settings.timezone)
     now = datetime.now(tz)
     soonest_allowed = now + timedelta(minutes=settings.post_lead_time_minutes)
@@ -107,63 +122,81 @@ def plan_schedule(posts: Iterable[GeneratedPost], settings: Settings | None = No
     if len(filtered_slots) < len(posts_list):
         raise RuntimeError("Not enough slots available within scheduling window.")
 
+    scheduled_records: list[QueueItem] = []
     scheduled: List[ScheduledPost] = []
     for post, slot in zip(posts_list, filtered_slots):
+        post_id = str(uuid.uuid4())
         scheduled.append(
             ScheduledPost(
-                id=str(uuid.uuid4()),
+                id=post_id,
                 text=post.text,
                 scheduled_time=slot,
                 topic=post.topic,
                 notes=post.notes,
             )
         )
+        scheduled_records.append(
+            QueueItem(
+                id=post_id,
+                text=post.text,
+                topic=post.topic,
+                notes=post.notes,
+                scheduled_at=slot,
+                status="pending",
+                result=None,
+                attempt_count=0,
+                hash=None,
+            )
+        )
 
-    queue.extend(scheduled)
-    queue.sort(key=lambda item: item.scheduled_time)
-    _save_queue(settings.post_queue_path, queue)
+    repo.upsert_items(scheduled_records)
+    _export_queue_snapshot(repo, settings.post_queue_path)
     return scheduled
 
 
 def _process_queue(settings: Settings, dry_run: bool = False) -> None:
-    queue = _load_queue(settings.post_queue_path)
-    if not queue:
-        return
-
     tz = ZoneInfo(settings.timezone)
     now = datetime.now(tz)
-    changed = False
-    poster: XPoster | None = None
 
-    for item in queue:
-        if item.status != "pending":
-            continue
-        if item.scheduled_time.tzinfo is None:
-            item.scheduled_time = item.scheduled_time.replace(tzinfo=tz)
-        if item.scheduled_time > now:
-            continue
+    repo = QueueRepository(settings.queue_db_path)
+    bootstrap_from_json(repo, settings.post_queue_path)
 
-        if poster is None:
-            poster = XPoster(dry_run=dry_run)
+    due_items = repo.list_pending(before=now)
+    if not due_items:
+        return
+
+    recent_hashes = repo.list_recent_hashes(since=now - timedelta(days=2))
+    poster = XPoster(dry_run=dry_run)
+    changes_made = False
+
+    for item in due_items:
+        text_hash = sha256(item.text.encode("utf-8")).hexdigest()
+
+        if text_hash in recent_hashes:
+            repo.mark_sent(
+                post_id=item.id,
+                tweet_id="",
+                posted_at=now,
+                hash_value=text_hash,
+            )
+            changes_made = True
+            continue
 
         result = poster.post(item.text)
-        changed = True
+        changes_made = True
         if result.success:
-            item.status = "sent"
-            item.result = {
-                "tweet_id": result.tweet_id,
-                "posted_at": datetime.now(tz).isoformat(),
-                "dry_run": result.dry_run,
-            }
+            repo.mark_sent(
+                post_id=item.id,
+                tweet_id=result.tweet_id or "",
+                posted_at=datetime.now(tz),
+                hash_value=text_hash,
+            )
+            recent_hashes.add(text_hash)
         else:
-            item.status = "failed"
-            item.result = {
-                "error": result.error,
-                "attempted_at": datetime.now(tz).isoformat(),
-            }
+            repo.mark_failed(item.id, error=result.error or "Unknown error")
 
-    if changed:
-        _save_queue(settings.post_queue_path, queue)
+    if changes_made:
+        _export_queue_snapshot(repo, settings.post_queue_path)
 
 
 

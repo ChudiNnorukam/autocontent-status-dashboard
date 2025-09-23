@@ -29,6 +29,7 @@ class Settings(BaseSettings):
     voice_profile_path: Path = Field(default=Path("data/voice_profile.json"))
     content_plan_path: Path = Field(default=Path("data/content_plan.json"))
     post_queue_path: Path = Field(default=Path("data/post_queue.json"))
+    queue_db_path: Path = Field(default=Path("data/queue.db"))
     scheduling_window_days: int = Field(default=7, ge=1, le=30)
     min_hours_between_posts: float = Field(default=6.0, ge=0.5)
     preferred_posting_hours: list[int] = Field(default_factory=lambda: [9, 12, 18])
@@ -71,6 +72,7 @@ class Settings(BaseSettings):
         self.voice_profile_path.parent.mkdir(parents=True, exist_ok=True)
         self.content_plan_path.parent.mkdir(parents=True, exist_ok=True)
         self.post_queue_path.parent.mkdir(parents=True, exist_ok=True)
+        self.queue_db_path.parent.mkdir(parents=True, exist_ok=True)
 
     def has_x_credentials(self) -> bool:
         return all(
