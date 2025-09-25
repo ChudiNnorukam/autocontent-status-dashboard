@@ -73,6 +73,18 @@ class QueueRepository:
                     ON posts(status, scheduled_at)
                 """
             )
+            conn.execute(
+                """
+                CREATE TABLE IF NOT EXISTS sent_history (
+                    hash TEXT PRIMARY KEY,
+                    post_id TEXT NOT NULL,
+                    text TEXT NOT NULL,
+                    posted_at TEXT NOT NULL,
+                    created_at TEXT NOT NULL,
+                    updated_at TEXT NOT NULL
+                )
+                """
+            )
 
     def list_pending(self, *, before: datetime | None = None) -> list[QueueItem]:
         query = "SELECT * FROM posts WHERE status = 'pending'"
@@ -138,6 +150,27 @@ class QueueRepository:
                 (payload, _serialize_datetime(datetime.utcnow()), post_id),
             )
 
+    def mark_duplicate(self, post_id: str, *, hash_value: str, detected_at: datetime) -> None:
+        payload = json.dumps(
+            {
+                "status": "duplicate",
+                "detected_at": _serialize_datetime(detected_at),
+                "message": "Post text matches a previously sent message.",
+            }
+        )
+        with closing(self._connect()) as conn, conn:
+            conn.execute(
+                """
+                UPDATE posts
+                   SET status = 'duplicate',
+                       result = ?,
+                       hash = COALESCE(?, hash),
+                       updated_at = ?
+                 WHERE id = ?
+                """,
+                (payload, hash_value, _serialize_datetime(datetime.utcnow()), post_id),
+            )
+
     def reset_failed(self, post_id: str, *, schedule_at: datetime) -> None:
         with closing(self._connect()) as conn, conn:
             conn.execute(
@@ -157,11 +190,79 @@ class QueueRepository:
 
     def list_recent_hashes(self, *, since: datetime) -> set[str]:
         with closing(self._connect()) as conn:
-            rows = conn.execute(
+            rows_posts = conn.execute(
                 "SELECT hash FROM posts WHERE hash IS NOT NULL AND updated_at >= ?",
                 (_serialize_datetime(since),),
             ).fetchall()
-        return {row["hash"] for row in rows}
+            rows_history = conn.execute(
+                "SELECT hash FROM sent_history WHERE updated_at >= ?",
+                (_serialize_datetime(since),),
+            ).fetchall()
+        return {row["hash"] for row in rows_posts if row["hash"]} | {
+            row["hash"] for row in rows_history if row["hash"]
+        }
+
+    def list_all_sent_hashes(self) -> set[str]:
+        with closing(self._connect()) as conn:
+            rows = conn.execute("SELECT hash FROM sent_history").fetchall()
+        return {row["hash"] for row in rows if row["hash"]}
+
+    def record_sent_history(
+        self,
+        *,
+        post_id: str,
+        text: str,
+        hash_value: str,
+        posted_at: datetime,
+    ) -> None:
+        timestamp = _serialize_datetime(datetime.utcnow())
+        with closing(self._connect()) as conn, conn:
+            conn.execute(
+                """
+                INSERT INTO sent_history (hash, post_id, text, posted_at, created_at, updated_at)
+                VALUES (?, ?, ?, ?, ?, ?)
+                ON CONFLICT(hash) DO UPDATE SET
+                    post_id = excluded.post_id,
+                    text = excluded.text,
+                    posted_at = excluded.posted_at,
+                    updated_at = excluded.updated_at
+                """,
+                (
+                    hash_value,
+                    post_id,
+                    text,
+                    _serialize_datetime(posted_at),
+                    timestamp,
+                    timestamp,
+                ),
+            )
+
+    def has_sent_hash(self, hash_value: str) -> bool:
+        with closing(self._connect()) as conn:
+            row = conn.execute(
+                "SELECT 1 FROM sent_history WHERE hash = ? LIMIT 1",
+                (hash_value,),
+            ).fetchone()
+        return row is not None
+
+    def list_sent_history(self) -> list[dict[str, str]]:
+        with closing(self._connect()) as conn:
+            rows = conn.execute(
+                "SELECT hash, post_id, text, posted_at, created_at, updated_at FROM sent_history ORDER BY posted_at DESC"
+            ).fetchall()
+        history: list[dict[str, str]] = []
+        for row in rows:
+            history.append(
+                {
+                    "hash": row["hash"],
+                    "post_id": row["post_id"],
+                    "text": row["text"],
+                    "posted_at": row["posted_at"],
+                    "first_recorded": row["created_at"],
+                    "last_recorded": row["updated_at"],
+                }
+            )
+        return history
 
     def remove(self, ids: Sequence[str]) -> None:
         if not ids:
