@@ -75,6 +75,11 @@ def _export_queue_snapshot(repo: QueueRepository, path: Path) -> None:
     path.write_text(json.dumps(items, indent=2), encoding="utf-8")
 
 
+def _export_sent_history_snapshot(repo: QueueRepository, path: Path) -> None:
+    history = repo.list_sent_history()
+    path.write_text(json.dumps(history, indent=2), encoding="utf-8")
+
+
 def _preferred_times(settings: Settings) -> List[time]:
     slots: List[time] = []
     for entry in settings.preferred_posting_times:
@@ -178,19 +183,19 @@ def _process_queue(settings: Settings, dry_run: bool = False) -> None:
     if not due_items:
         return
 
-    recent_hashes = repo.list_recent_hashes(since=now - timedelta(days=2))
+    sent_hashes = repo.list_all_sent_hashes()
     poster = XPoster(dry_run=dry_run)
     changes_made = False
+    history_updated = False
 
     for item in due_items:
         text_hash = sha256(item.text.encode("utf-8")).hexdigest()
 
-        if text_hash in recent_hashes:
-            repo.mark_sent(
+        if text_hash in sent_hashes:
+            repo.mark_duplicate(
                 post_id=item.id,
-                tweet_id="",
-                posted_at=now,
                 hash_value=text_hash,
+                detected_at=now,
             )
             changes_made = True
             continue
@@ -198,18 +203,29 @@ def _process_queue(settings: Settings, dry_run: bool = False) -> None:
         result = poster.post(item.text)
         changes_made = True
         if result.success:
+            posted_at = datetime.now(tz)
             repo.mark_sent(
                 post_id=item.id,
                 tweet_id=result.tweet_id or "",
-                posted_at=datetime.now(tz),
+                posted_at=posted_at,
                 hash_value=text_hash,
             )
-            recent_hashes.add(text_hash)
+            sent_hashes.add(text_hash)
+            if not result.dry_run:
+                repo.record_sent_history(
+                    post_id=item.id,
+                    text=item.text,
+                    hash_value=text_hash,
+                    posted_at=posted_at,
+                )
+                history_updated = True
         else:
             repo.mark_failed(item.id, error=result.error or "Unknown error")
 
     if changes_made:
         _export_queue_snapshot(repo, settings.post_queue_path)
+    if history_updated:
+        _export_sent_history_snapshot(repo, settings.sent_history_path)
 
 
 
