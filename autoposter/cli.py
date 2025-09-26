@@ -85,7 +85,7 @@ def show_queue() -> None:
 
 @app.command()
 def process(
-    dry_run: bool = typer.Option(False, help="Do not post, just mark items as processed."),
+    dry_run: bool = typer.Option(True, help="Do not post, just mark items as processed."),
 ) -> None:
     """Process any posts that are due right now."""
 
@@ -96,7 +96,7 @@ def process(
 @app.command("run")
 def run_scheduler(
     poll_seconds: int = typer.Option(60, help="How frequently to check for due posts."),
-    dry_run: bool = typer.Option(False, help="Log posts instead of publishing."),
+    dry_run: bool = typer.Option(True, help="Log posts instead of publishing."),
 ) -> None:
     """Launch the persistent scheduler loop."""
 

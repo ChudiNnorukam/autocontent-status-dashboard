@@ -1,8 +1,7 @@
 name: Autoposter Scheduler
 
 on:
-  schedule:
-    - cron: '*/15 * * * *'
+  # Disabled scheduled runs; manual only
   workflow_dispatch:
 
 jobs:
@@ -44,8 +43,8 @@ jobs:
           TIMEZONE=${TIMEZONE:-America/New_York}
           EOF
 
-      - name: Process due posts
+      - name: Process due posts (dry run)
         env:
           PYTHONPATH: .
         run: |
-          python -m autoposter.cli process
+          python -m autoposter.cli process --dry-run

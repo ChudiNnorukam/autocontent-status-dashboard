@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 import json
 import uuid
 from contextlib import closing
@@ -183,6 +184,13 @@ def _process_queue(settings: Settings, dry_run: bool = False) -> None:
     if not due_items:
         return
 
+    # Cap processing per run to avoid large bursts (CI safety)
+    try:
+        max_per_run = max(1, int(os.environ.get("MAX_POSTS_PER_RUN", "1")))
+    except Exception:
+        max_per_run = 1
+    due_items = due_items[:max_per_run]
+
     sent_hashes = repo.list_all_sent_hashes()
     poster = XPoster(dry_run=dry_run)
     changes_made = False
@@ -240,13 +248,4 @@ def start_scheduler(poll_seconds: int = 60, dry_run: bool = False) -> None:
     scheduler = BlockingScheduler(timezone=settings.timezone)
     scheduler.add_job(
         lambda: _process_queue(settings, dry_run=dry_run),
-        trigger=IntervalTrigger(seconds=poll_seconds),
-        max_instances=1,
-        coalesce=True,
-        id="x-autoposter",
-    )
-
-    try:
-        scheduler.start()
-    except (KeyboardInterrupt, SystemExit):  # pragma: no cover - CLI handling
-        scheduler.shutdown()
+        trigger=IntervalTrigger(sec
