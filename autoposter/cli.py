@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 from contextlib import closing
+from hashlib import sha256
+from datetime import datetime
 
 import typer
 
@@ -13,6 +15,7 @@ from .workflows import (
     schedule_generated_posts,
     train_voice,
 )
+from .data_fetcher import fetch_user_tweets
 
 app = typer.Typer(add_completion=False, help="Personalized X/Twitter autoposter CLI")
 
@@ -91,6 +94,59 @@ def process(
 
     process_queue_once(dry_run=dry_run)
     typer.echo("Queue processed.")
+
+
+@app.command()
+def backfill(
+    limit: int = typer.Option(200, help="Number of recent posts to scan from your timeline."),
+    include_retweets: bool = typer.Option(False, help="Include retweets in backfill."),
+    include_replies: bool = typer.Option(False, help="Include replies in backfill."),
+    dry_run: bool = typer.Option(True, help="Preview without writing to sent_history."),
+) -> None:
+    """Backfill sent_history from your public timeline to improve de-duplication.
+
+    Uses snscrape to fetch recent posts for the configured username and records
+    their text hashes into the sent_history table. This helps the scheduler
+    detect duplicates even in clean CI environments.
+    """
+    settings = get_settings()
+    username = settings.username
+    tweets = fetch_user_tweets(
+        username=username,
+        limit=limit,
+        include_retweets=include_retweets,
+        include_replies=include_replies,
+    )
+    repo = QueueRepository(settings.queue_db_path)
+    # ensure tables exist
+    bootstrap_from_json(repo, settings.post_queue_path)
+
+    added = 0
+    skipped = 0
+    for t in tweets:
+        text = (t.content or "").strip()
+        if not text:
+            skipped += 1
+            continue
+        h = sha256(text.encode("utf-8")).hexdigest()
+        if dry_run:
+            # count if it would be new
+            if repo.has_sent_hash(h):
+                skipped += 1
+            else:
+                added += 1
+        else:
+            # Upsert; record_sent_history handles conflict on hash
+            repo.record_sent_history(
+                post_id=str(t.id),
+                text=text,
+                hash_value=h,
+                posted_at=t.date,
+            )
+            added += 1
+    typer.echo(
+        f"Backfill {'(dry-run) ' if dry_run else ''}complete. username={username} scanned={len(tweets)} would_add={added if dry_run else added} skipped={skipped}"
+    )
 
 
 @app.command("run")
