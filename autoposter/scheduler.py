@@ -15,9 +15,10 @@ from apscheduler.triggers.interval import IntervalTrigger
 from zoneinfo import ZoneInfo
 
 from .config import Settings, get_settings
-from .content_generator import GeneratedPost
+from .content_generator import GeneratedPost, generate_posts
 from .poster import XPoster
 from .storage import QueueItem, QueueRepository, bootstrap_from_json
+from .workflows import load_or_train_voice
 
 
 @dataclass
@@ -173,12 +174,67 @@ def plan_schedule(posts: Iterable[GeneratedPost], settings: Settings | None = No
     return scheduled
 
 
+def _nearest_slots_within_lead(settings: Settings, now: datetime) -> list[datetime]:
+    tz = ZoneInfo(settings.timezone)
+    lead = timedelta(minutes=settings.post_lead_time_minutes)
+    today = now.date()
+    slots: list[datetime] = []
+    for hhmm in _preferred_times(settings):
+        # today slot
+        slot_today = datetime.combine(today, hhmm, tzinfo=tz)
+        if timedelta(0) <= (slot_today - now) <= lead:
+            slots.append(slot_today)
+        # if we've crossed today's slot, check tomorrow for an early morning window
+        slot_tomorrow = datetime.combine(today + timedelta(days=1), hhmm, tzinfo=tz)
+        # only consider tomorrow’s slot if the window spans midnight
+        if (slot_today - now) < timedelta(0) and (slot_tomorrow - now) <= lead:
+            slots.append(slot_tomorrow)
+    return slots
+
+
+def _ensure_jit_posts(settings: Settings, repo: QueueRepository, now: datetime) -> None:
+    if not settings.jit_generation:
+        return
+    slots = _nearest_slots_within_lead(settings, now)
+    if not slots:
+        return
+    # For each slot in window, ensure a pending item exists; generate at most one per run
+    for slot in sorted(slots):
+        pending = repo.list_pending(before=slot + timedelta(seconds=1))
+        if any(abs((item.scheduled_at - slot).total_seconds()) <= 60 for item in pending):
+            continue
+        # Generate one post via LLM at low temperature
+        profile = load_or_train_voice()
+        posts = generate_posts(profile, topics=None, count=1, prefer_llm=True,
+                               temperature=(settings.get_openai_config().temperature if settings.get_openai_config() else 0.3))
+        if not posts:
+            continue
+        post = posts[0]
+        qitem = QueueItem(
+            id=str(uuid.uuid4()),
+            text=post.text,
+            topic=post.topic,
+            notes=post.notes,
+            scheduled_at=slot,
+            status="pending",
+            result=None,
+            attempt_count=0,
+            hash=None,
+        )
+        repo.upsert_items([qitem])
+        _export_queue_snapshot(repo, settings.post_queue_path)
+        break
+
+
 def _process_queue(settings: Settings, dry_run: bool = False) -> None:
     tz = ZoneInfo(settings.timezone)
     now = datetime.now(tz)
 
     repo = QueueRepository(settings.queue_db_path)
     bootstrap_from_json(repo, settings.post_queue_path)
+
+    # Ensure just-in-time generation within lead window
+    _ensure_jit_posts(settings, repo, now)
 
     due_items = repo.list_pending(before=now)
     if not due_items:
@@ -248,4 +304,13 @@ def start_scheduler(poll_seconds: int = 60, dry_run: bool = False) -> None:
     scheduler = BlockingScheduler(timezone=settings.timezone)
     scheduler.add_job(
         lambda: _process_queue(settings, dry_run=dry_run),
-        trigger=IntervalTrigger(sec
+        trigger=IntervalTrigger(seconds=poll_seconds),
+        max_instances=1,
+        coalesce=True,
+        id="x-autoposter",
+    )
+
+    try:
+        scheduler.start()
+    except (KeyboardInterrupt, SystemExit):  # pragma: no cover - CLI handling
+        scheduler.shutdown()

@@ -18,6 +18,7 @@ class XCredentials(BaseModel):
 class OpenAIConfig(BaseModel):
     api_key: SecretStr
     model: str = Field(default="gpt-4o-mini")
+    temperature: float = Field(default=0.3, ge=0.0, le=1.0)
 
 
 class Settings(BaseSettings):
@@ -38,6 +39,7 @@ class Settings(BaseSettings):
         default_factory=lambda: ["06:00", "10:00", "15:00", "20:00", "23:30"]
     )
     post_lead_time_minutes: int = Field(default=15, ge=0)
+    jit_generation: bool = Field(default=True, env="JIT_GENERATION")
 
     x_api_key: SecretStr | None = Field(default=None, env=["X_API_KEY", "X_TWITTER_API_KEY"])
     x_api_secret: SecretStr | None = Field(default=None, env=["X_API_SECRET", "X_TWITTER_API_SECRET"])
@@ -49,6 +51,7 @@ class Settings(BaseSettings):
 
     openai_api_key: SecretStr | None = Field(default=None, env=["OPENAI_API_KEY", "OPENAI_KEY"])
     openai_model: str | None = Field(default=None, env="OPENAI_MODEL")
+    openai_temperature: float | None = Field(default=None, env="OPENAI_TEMPERATURE")
 
     class Config:
         env_file = ".env"
@@ -120,6 +123,7 @@ class Settings(BaseSettings):
         return OpenAIConfig(
             api_key=self.openai_api_key,
             model=self.openai_model or "gpt-4o-mini",
+            temperature=float(self.openai_temperature) if self.openai_temperature is not None else 0.3,
         )
 
 

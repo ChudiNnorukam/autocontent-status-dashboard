@@ -59,13 +59,14 @@ FALLBACK_CTA = [
 ]
 
 
-def _llm_generate(profile: VoiceProfile, topics: Sequence[str], count: int) -> List[GeneratedPost]:
+def _llm_generate(profile: VoiceProfile, topics: Sequence[str], count: int, temperature: float | None = None) -> List[GeneratedPost]:
     settings = get_settings()
     openai_config = settings.get_openai_config()
     if openai_config is None or OpenAI is None:
         raise RuntimeError("OpenAI client is not configured.")
 
     client = OpenAI(api_key=openai_config.api_key.get_secret_value())
+    temp = temperature if temperature is not None else getattr(openai_config, "temperature", 0.3)
 
     topic_block = "\n".join(f"- {topic}" for topic in topics) if topics else "- General updates"
     examples = "\n\n".join(profile.high_performing_examples)
@@ -96,7 +97,7 @@ def _llm_generate(profile: VoiceProfile, topics: Sequence[str], count: int) -> L
                 ).strip(),
             },
         ],
-        temperature=0.7,
+        temperature=temp,
         response_format={"type": "json_object"},
     )
 
@@ -147,11 +148,12 @@ def generate_posts(
     topics: Sequence[str] | None = None,
     count: int = 5,
     prefer_llm: bool = True,
+    temperature: float | None = None,
 ) -> List[GeneratedPost]:
     topics = list(topics or [])
     if prefer_llm:
         try:
-            llm_posts = _llm_generate(profile, topics, count)
+            llm_posts = _llm_generate(profile, topics, count, temperature=temperature)
             if llm_posts:
                 return llm_posts
         except Exception:
