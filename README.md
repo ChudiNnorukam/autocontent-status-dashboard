@@ -18,6 +18,11 @@ A Python toolkit that learns the voice of `@chudinnorukam`, drafts new posts tha
    ```
 
 2. **Create a `.env` file** (see [Environment Variables](#environment-variables)).
+   ```bash
+   cp .env.example .env
+   # then edit .env and fill in your values
+   ```
+   Use X_HANDLE for identity (USERNAME is supported for backward-compat but X_HANDLE is preferred).
 
 3. **Train the voice profile**
    ```bash
